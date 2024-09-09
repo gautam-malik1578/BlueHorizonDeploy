@@ -1,0 +1,20 @@
+.pie {
+  padding: 0;
+  /* margin-top: 50px; */
+  height: 700px;
+  width: 1200px;
+  /* transform: translateY(-50px); */
+  /* transform: scale(0.6); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.chartBtn {
+  padding: 8px 16px;
+  background-color: var(--color-red);
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+}

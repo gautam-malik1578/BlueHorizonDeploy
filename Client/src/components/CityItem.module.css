@@ -1,0 +1,62 @@
+.CityItem {
+  height: 150px;
+  color: black;
+  /* background-color: yellow; */
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.3s;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.CityItem:hover {
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #dddddd5c;
+  transform: scale(1.01);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-grey-1);
+}
+.cityname {
+  text-transform: capitalize;
+  font-size: var(--font-size-md);
+  padding: 0;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tagsList {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.subIntro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1px 5px;
+  padding-right: 2px;
+  font-size: 1rem;
+}
+.country {
+}
+.continent {
+}
+.currency {
+}
+.todos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+}
+.active {
+  background-color: var(--color-grey-1);
+  border: 1px solid var(--color-blue);
+}

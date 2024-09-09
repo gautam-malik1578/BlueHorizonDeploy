@@ -1,0 +1,35 @@
+.tags {
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0 5px;
+  color: white;
+  border-radius: var(--border-radius-sm);
+  opacity: 0.3;
+}
+.blue {
+  background-color: var(--color-blue);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  text-transform: capitalize;
+  opacity: 0.6;
+  padding: 10px;
+}
+.red {
+  background-color: var(--color-red);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  text-transform: capitalize;
+  opacity: 0.6;
+  padding: 10px;
+}
+.green {
+  background-color: var(--color-green);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  text-transform: capitalize;
+  opacity: 0.6;
+  padding: 10px;
+}

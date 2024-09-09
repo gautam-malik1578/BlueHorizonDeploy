@@ -1,0 +1,68 @@
+.settings {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  padding: 1rem 0;
+  padding-bottom: 0.5rem;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  width: 80%;
+  /* font-size: 1.2rem; */
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: var(--color-black);
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.form div {
+  height: 4rem;
+  border: 1px solid var(--color-black);
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+.form div:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+/* .form div span {
+  font-size: 0.8rem;
+  transform: translateX(-100%);
+} */
+.form div label {
+  font-size: 1rem;
+  /* background-color: yellow; */
+  width: 15rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  /* padding-left: 1rem; */
+}
+.form div input,
+.form div select {
+  width: 14rem;
+  outline: none;
+  border-radius: 12px;
+  border: 1px solid var(--color-black);
+  transition: all 0.3s;
+}
+.form div input:focus,
+.form div select:focus {
+  background-color: #fff;
+  border: 1px solid var(--color-blue);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+.form div select:hover {
+  cursor: pointer;
+}
+.form div select option {
+  cursor: pointer;
+}

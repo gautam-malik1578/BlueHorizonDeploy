@@ -1,0 +1,81 @@
+.avatarBox {
+  background-color: pink;
+  position: relative;
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  flex-basis: 30%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.avatarBox h2 {
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+.avatarBox button {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  padding: 3px 9px;
+  text-transform: capitalize;
+  background-color: var(--color-red);
+  border-radius: 6px;
+  color: white;
+  border: 1px solid white;
+}
+.avatarBox button:hover {
+  cursor: pointer;
+}
+.avatars {
+  height: 90%;
+  /* background-color: yellow; */
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.avatar {
+  height: 18%;
+  border: 1px solid var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 45%;
+  border-radius: 12px;
+  transition: all 0.3s;
+  color: var(--color-black);
+  padding: 0;
+}
+.avatar:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+  color: var(--color-blue);
+  transform: translateY(-1.5px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.avatar span {
+  /* color: var(--color-black); */
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.avatar figure {
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+.avatar figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.activeAvatar {
+  background-color: whitesmoke;
+  color: var(--color-red);
+}

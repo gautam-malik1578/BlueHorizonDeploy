@@ -1,0 +1,85 @@
+.myreviews {
+  color: var(--color-black);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 92vh;
+  /* overflow-y: scroll; */
+}
+.myreviews h1 {
+  /* align-self: start; */
+  margin-top: 1rem;
+  width: 80%;
+  border-bottom: 1px solid black;
+  /* margin-bottom: 1rem; */
+  padding-bottom: 0.5rem;
+}
+.review {
+  display: flex;
+  border: 1px solid var(--color-black);
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  gap: 1rem;
+  width: 80%;
+  min-height: 10rem;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+.btns {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  /* padding: 1rem 1rem; */
+}
+.btns button {
+  padding: 10px 10px;
+  background-color: var(--color-blue);
+  color: white;
+  border: 1px solid white;
+  border-radius: 9px;
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+.btns button:hover {
+  background-color: var(--color-red);
+  cursor: pointer;
+  transform: translateY(3px);
+}
+.review figure {
+  justify-self: self-start;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid black;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+}
+.review figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-left: 0;
+}
+.content {
+  font-size: 1rem;
+  padding: 0;
+  padding-right: 10px;
+}
+.info {
+  flex-grow: 1;
+}

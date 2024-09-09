@@ -1,0 +1,126 @@
+.me {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+.myDetails {
+  height: 100%;
+  /* background-color: purple; */
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.avtar {
+  /* background-color: pink; */
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  flex-basis: 30%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.avtar span {
+  text-transform: capitalize;
+}
+.info {
+  flex-basis: 50%;
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  height: 60%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 1rem;
+  padding: 2rem;
+}
+.info p {
+  padding: 0;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.myInfo {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.myInfo div {
+  /* justify-self: center; */
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-black);
+}
+.myInfo div span:first-child {
+  text-transform: capitalize;
+  display: block;
+  font-size: 1rem;
+  width: 6rem;
+  font-weight: 600;
+  /* background-color: pink; */
+}
+.myInfo div span:last-child {
+  font-size: 1rem;
+}
+.avtar figure {
+  height: 12rem;
+  width: 12rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avtar figure img {
+  height: 100%;
+  width: 100%;
+}
+.avtar span {
+  color: var(--color-blue);
+  font-size: 1rem;
+}
+.avtar button {
+  padding: 5px 10px;
+  width: 7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border: 1px solid var(--color-blue);
+  border-radius: var(--border-radius-md);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.avtar button:hover {
+  background-color: var(--color-blue);
+  color: #fff;
+  cursor: pointer;
+}
+.btns {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+.btns button {
+  padding: 5px 10px;
+  width: 7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border: 1px solid var(--color-blue);
+  border-radius: var(--border-radius-md);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.btns button:hover {
+  background-color: var(--color-blue);
+  color: #fff;
+  cursor: pointer;
+}

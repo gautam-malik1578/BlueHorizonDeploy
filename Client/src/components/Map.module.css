@@ -1,0 +1,6 @@
+/* :global(.leaflet-popup-content-wrapper) {
+  background-color: purple;
+} */
+:global(.leaflet-popup-content) {
+  background-color: purple;
+}

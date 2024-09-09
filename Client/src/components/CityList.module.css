@@ -1,0 +1,23 @@
+.cityList {
+  padding: 10px;
+  /* border-radius: var(--border-radius-lg); */
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.067);
+  /* border: 3px solid var(--color-white); */
+  /* border: 3px solid var(--color-black); */
+  border-right: 2px solid var(--color-black);
+  flex-basis: 40%;
+  background-color: #fff;
+  /* background-color: pink; */
+  height: 100%;
+  /* overflow: hidden; */
+  overflow: scroll;
+}
+.list {
+  transform: translateY(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: yellow; */
+  /* overflow: scroll; */
+}

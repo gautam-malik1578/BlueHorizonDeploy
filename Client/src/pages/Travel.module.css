@@ -1,0 +1,59 @@
+.travelMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0%;
+  padding: 0 2.5%;
+  height: 92vh;
+  position: relative;
+  /* transform: translateY(-2%); */
+  /* background-color: pink; */
+  padding: 0;
+  margin: 0;
+  /* padding-top: 10px; */
+}
+.travelMainItem {
+  /* border-radius: var(--border-radius-lg); */
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.067);
+  border: 3px solid var(--color-white);
+  flex-basis: 60%;
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+}
+.btns {
+  position: absolute;
+  top: 4.5%;
+  left: 52%;
+  display: flex;
+  gap: 10px;
+  transform: translate(-70%, -60%);
+  z-index: 500;
+}
+.btns button {
+  cursor: pointer;
+  text-transform: capitalize;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: var(--border-radius-md);
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  transition: all 0.3s;
+}
+.btns button:hover {
+  background-color: #0056d2;
+  transform: translateY(3px);
+}
+.btns button span {
+  padding: 0 4px;
+}
+.icon {
+  height: 1rem;
+  width: 1rem;
+  padding: 0;
+  color: var(--color-white);
+}

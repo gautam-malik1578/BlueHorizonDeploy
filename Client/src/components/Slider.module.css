@@ -1,0 +1,81 @@
+.slider {
+  margin: 0;
+  padding: 0;
+  width: 85%;
+  background-color: pink;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: all 0.3s;
+  /* height: 100%;
+  width: 100%; */
+  opacity: 0;
+}
+.slide_active {
+  position: absolute;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: visible;
+  transition: all 0.3s;
+  /* border: 1px solid white; */
+}
+.fig {
+  height: 500px;
+  width: 1200px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  object-fit: cover;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.119);
+}
+.fig:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.307);
+}
+.img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  /* object-fit: contain; */
+}
+.left {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  font-size: 100px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* color: --color-blue; */
+}
+.right {
+  position: absolute;
+  top: 40%;
+  left: 103%;
+  font-size: 100px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

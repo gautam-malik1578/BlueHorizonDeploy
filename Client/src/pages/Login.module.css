@@ -1,0 +1,96 @@
+.login {
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  /* background-color: pink; */
+  /* background-color: var(--color-grey-2); */
+  background-color: #fff;
+  color: var(--color-blue);
+  transform: translatey(150px);
+  border-radius: 11px;
+}
+.login h1 {
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.login form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.login div {
+  /* background-color: purple; */
+  width: 80%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin: 0 auto; */
+}
+.login div label {
+  width: 20%;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.login div input {
+  width: 70%;
+  height: 90%;
+  outline: none;
+  padding: 5px;
+  border-radius: 7px;
+  border: 1px solid var(--color-black);
+  transition: all 0.3s;
+}
+.login div input:hover {
+  border: 1px solid var(--color-blue);
+}
+.login div p {
+  position: absolute;
+  font-size: 10px;
+  bottom: -25%;
+  left: 30%;
+  color: var(--color-red);
+  /* transform: translatex(-50%); */
+}
+.login form button {
+  width: 80%;
+  height: 40px;
+  transition: all 0.3s;
+  overflow: hidden;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 7px;
+  color: var(--color-blue);
+}
+.login form button:hover {
+  cursor: pointer;
+}
+.login h3 {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-black);
+}
+.login a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  /* transform-origin: 50%; */
+}
+.login a:hover {
+  color: var(--color-blue);
+  /* border-bottom: 1px solid var(--color-blue); */
+}

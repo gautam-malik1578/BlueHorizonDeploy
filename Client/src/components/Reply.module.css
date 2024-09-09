@@ -1,0 +1,45 @@
+.reply {
+  border-bottom: 1px solid var(--color-black);
+  padding: 10px;
+}
+.reply p {
+  font-size: 0.8rem;
+}
+.replyIntro {
+  /* padding: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.replyIntro div {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.username {
+  font-size: 1rem;
+  padding: 0;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.icon {
+  box-sizing: content-box;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btns button {
+  width: 5rem;
+  cursor: pointer;
+  /* border: 2px solid transparent; */
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.btns button:hover {
+  /* border: 2px solid var(--color-white); */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}

@@ -1,0 +1,67 @@
+.name {
+  text-transform: capitalize;
+  font-size: var(--font-size-sm);
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.tagsList {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  margin-top: -7px;
+}
+.description {
+  padding-top: 0;
+  font-size: 0.8rem;
+  /* letter-spacing: 0.3px; */
+  /* line-height: 110%; */
+}
+.attractionDetails {
+  flex-basis: 70%;
+}
+.showBtn {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  width: 5rem;
+  cursor: pointer;
+  margin-left: 5px;
+  border: 1px solid var(--color-white);
+  /* border-radius: var(--border-radius-sm); */
+  border-radius: 50px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+.showBtn:hover {
+  transform: translateY(3px);
+  background-color: var(--color-blue);
+}
+.icon {
+  box-sizing: content-box;
+  height: 20px;
+  width: 20px;
+  stroke: var(--color-red);
+  color: var(--color-red);
+  cursor: pointer;
+  /*
+  stroke: aqua; */
+  /* stroke-width: 20px; */
+}
+.attractionIntro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.penchent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numLikes {
+  font-size: 1rem;
+}
+.activeBtn {
+  transform: translateY(-5px);
+  background-color: purple;
+}

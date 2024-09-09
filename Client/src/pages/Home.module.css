@@ -1,0 +1,13 @@
+.home {
+  padding: 5rem;
+  margin: 0;
+  height: 92vh;
+  /* overflow: hidden; */
+  /* background-color: whitesmoke; */
+  /* background-image: linear-gradient(125deg, white 0%, var(--color-blue) 50%); */
+  background-color: rgba(26, 115, 232, 0.188);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}

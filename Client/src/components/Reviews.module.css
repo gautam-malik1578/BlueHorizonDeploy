@@ -1,0 +1,61 @@
+.reviews {
+  grid-row: 2;
+  grid-column: 1/-1;
+  /* background-color: pink; */
+
+  /* border-radius: var(--border-radius-lg); */
+  /* position: relative; */
+  /* max-height: 35rem;
+  overflow-y: scroll;
+  border: 1px solid var(--color-black); */
+  /* this is the new styling */
+  background-color: #fff;
+  height: 92vh;
+  overflow: scroll;
+  padding: 1rem;
+  color: var(--color-black);
+  margin-top: 3%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; */
+}
+.addReview {
+  font-size: 0.8rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  /* margin-bottom: 1rem; */
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-transform: capitalize;
+  transition: all 0.3s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  /* position: absolute;
+  right: 22%;
+  top: 2%; */
+  padding: 10px 20px;
+}
+.addReview:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+.reviewsIntro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: purple; */
+  padding: 0;
+  margin: 0.5rem;
+  border-bottom: 1px solid var(--color-black);
+  width: 100%;
+  position: absolute;
+  top: 7%;
+  left: -0.5%;
+  z-index: 100;
+  background-color: #fff;
+}
+.reviewsIntro p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}

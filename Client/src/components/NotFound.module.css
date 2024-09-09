@@ -1,0 +1,20 @@
+.notfound {
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.notfound figure {
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+}
+.notfound figure img {
+  height: 100%;
+  width: 100%;
+}
