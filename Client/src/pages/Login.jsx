@@ -19,7 +19,7 @@ function Login() {
     mutate(data, {
       onSuccess: () => {
         reset();
-        navigate("/travel");
+        navigate("/travel/search");
       },
     });
   }

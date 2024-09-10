@@ -1,3 +1,12 @@
+.travelMainItem {
+  /* border-radius: var(--border-radius-lg); */
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.067);
+  border: 3px solid var(--color-white);
+  flex-basis: 60%;
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+}
 .cityList {
   padding: 10px;
   /* border-radius: var(--border-radius-lg); */
@@ -5,17 +14,31 @@
   /* border: 3px solid var(--color-white); */
   /* border: 3px solid var(--color-black); */
   border-right: 2px solid var(--color-black);
-  flex-basis: 40%;
+  flex-basis: 100%;
   background-color: #fff;
   /* background-color: pink; */
+  /* background: red; */
   height: 100%;
   /* overflow: hidden; */
   overflow: scroll;
-}
-.list {
-  transform: translateY(50px);
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.searchbar {
+  display: block;
+  background-color: yellow;
+  width: 100%;
+  height: 200px;
+  z-index: 100;
+  border-bottom: 1px solid black;
+  border-color: yellow;
+}
+.list {
+  transform: translateY(70px);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   align-items: center;
   gap: 10px;
   /* background-color: yellow; */

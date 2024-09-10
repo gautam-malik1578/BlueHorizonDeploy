@@ -13,6 +13,9 @@ import "./App.css";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 import ReviewsPage from "./pages/ReviewsPage";
+import CityDetails from "./components/cityDetails";
+import Map from "./components/Map";
+import CityList from "./components/CityList";
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60 * 1000 } },
 });
@@ -27,7 +30,11 @@ function App() {
             <Route element={<AppLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/dashboard/:show" element={<Dashboard />} />
-              <Route path="/travel" element={<Travel />}></Route>
+              <Route path="/travel" element={<Travel />}>
+                <Route path="search" element={<CityList />} />
+                <Route path="citydetail/:cityId" element={<CityDetails />} />
+                <Route path="map" element={<Map />} />
+              </Route>
               <Route
                 path="/attraction/:attrationName/:attractionId/reviews"
                 element={<ReviewsPage />}

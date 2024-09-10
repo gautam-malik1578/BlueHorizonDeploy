@@ -17,45 +17,50 @@ function SearchBar({ setCityData }) {
     searchValue
   );
   return (
-    <form
-      className={styles.form}
-      onSubmit={(e) => {
-        e.preventDefault();
-        dispatch(search({ searchType: type, searchValue: value }));
-      }}
-    >
-      <HiOutlineMagnifyingGlass className={styles.icon} />
-      <input
-        type="text"
-        value={searchValue}
-        onChange={(e) => {
-          setValue(e.target.value);
-          dispatch(search({ searchType: type, searchValue: e.target.value }));
+    <div className={styles.outBox}>
+      <span>hello</span>
+      <form
+        className={styles.form}
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch(search({ searchType: type, searchValue: value }));
         }}
-        placeholder={
-          searchType === "map"
-            ? `search in radius of ${mapRadius}km`
-            : `enter the ${type} here`
-        }
-        className={styles.input}
-        disabled={searchType === "map"}
-      />
-      <select
-        value={searchType}
-        onChange={(e) => {
-          setType(e.target.value);
-          dispatch(search({ searchType: e.target.value, searchValue: value }));
-        }}
-        className={styles.selection}
       >
-        <option value="country">Country</option>
-        <option value="cityName">City</option>
-        <option value="attraction">Attraction</option>
-        <option value="map" disabled>
-          Map
-        </option>
-      </select>
-    </form>
+        <HiOutlineMagnifyingGlass className={styles.icon} />
+        <input
+          type="text"
+          value={searchValue}
+          onChange={(e) => {
+            setValue(e.target.value);
+            dispatch(search({ searchType: type, searchValue: e.target.value }));
+          }}
+          placeholder={
+            searchType === "map"
+              ? `search in radius of ${mapRadius}km`
+              : `enter the ${type} here`
+          }
+          className={styles.input}
+          disabled={searchType === "map"}
+        />
+        <select
+          value={searchType}
+          onChange={(e) => {
+            setType(e.target.value);
+            dispatch(
+              search({ searchType: e.target.value, searchValue: value })
+            );
+          }}
+          className={styles.selection}
+        >
+          <option value="country">Country</option>
+          <option value="cityName">City</option>
+          <option value="attraction">Attraction</option>
+          <option value="map" disabled>
+            Map
+          </option>
+        </select>
+      </form>
+    </div>
   );
 }
 

@@ -30,7 +30,7 @@ function NavBar() {
           <BiHome className={styles.icon} />
           <span>Home</span>
         </NavLink>
-        <NavLink className={styles.navItem} to="/travel">
+        <NavLink className={styles.navItem} to="/travel/search">
           <BiMapPin className={styles.icon} />
           <span>Travel</span>
         </NavLink>

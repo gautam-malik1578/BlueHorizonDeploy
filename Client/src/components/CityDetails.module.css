@@ -4,9 +4,10 @@
   box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.067);
   /* border: 3px solid var(--color-black); */
 
-  flex-basis: 60%;
+  /* flex-basis: 60%; */
   background-color: #fff;
   height: 100%;
+  width: 80%;
   overflow: scroll;
   color: black;
   /* position: relative; */
@@ -17,11 +18,11 @@
   font-size: var(--font-size-md);
   height: 53.5px;
   border-bottom: 1px solid black;
-  padding-left: 30px;
-  position: absolute;
-  top: 0;
-  left: 40%;
-  width: 60%;
+  /* padding-left: 30px; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 40%; */
+  /* width: 60%; */
   z-index: 100;
   background-color: #fff;
   /* background-color: pink; */

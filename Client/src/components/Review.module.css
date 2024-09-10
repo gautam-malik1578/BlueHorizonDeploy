@@ -1,5 +1,5 @@
 .review {
-  width: 100%;
+  width: 90%;
   /* align-self: flex-start; */
   min-height: 150px;
   border: 1px solid black;
@@ -10,6 +10,9 @@
   font-size: 0.8rem;
   padding: 0.5rem;
   margin-top: 0;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 .review:hover {
   cursor: pointer;

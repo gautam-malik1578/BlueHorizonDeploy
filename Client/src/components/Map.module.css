@@ -4,3 +4,91 @@
 :global(.leaflet-popup-content) {
   background-color: purple;
 }
+
+:global(.leaflet-popup-content-wrapper) {
+  /* background-color: purple; */
+  /* padding: 3px; */
+  transition: all 0.3s;
+
+  animation: popup 0.3s ease-in;
+
+  transform-origin: bottom;
+  margin: 0;
+  padding: 0;
+}
+
+:global(.leaflet-popup-content) {
+  /* background-color: purple; */
+  border-left: 3px solid var(--color-blue);
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* font-size: 0.6rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+:global(.leaflet-popup-content span) {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    /* transform: scale(1.3); */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    /* transform: scale(1.3); */
+    opacity: 1;
+  }
+}
+
+:global(.leaflet-popup-content div) {
+  /* font-size: 0.6rem; */
+}
+:global(.leaflet-popup-tip) {
+  animation: popup 0.3s ease-in;
+}
+
+:global(.leaflet-container a.leaflet-popup-close-button) {
+  color: var(--color-blue);
+  font-size: 1rem;
+  height: 200px;
+  width: 200px;
+  /* not working for some reason */
+}
+:global(.leaflet-marker-icon) {
+  animation: fadeIn 0.3s ease-in;
+  transform-origin: bottom;
+  /* box-shadow: none; */
+}
+:global(.leaflet-control-zoom) {
+  padding: 0;
+  margin: 0;
+}
+:global(.leaflet-control-zoom-in) {
+  padding: 0;
+}
+:global(.leaflet-control-zoom-out) {
+  padding: 0;
+}
+:global(.leaflet-left) {
+  display: none;
+}
+.tolink:link,
+.tolink:visited {
+  text-decoration: none;
+}
+.tolink:hover,
+.tolink:active {
+}

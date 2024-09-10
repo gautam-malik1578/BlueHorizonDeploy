@@ -15,10 +15,10 @@
   padding: 1rem;
   color: var(--color-black);
   margin-top: 3%;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px; */
+  gap: 5px;
 }
 .addReview {
   font-size: 0.8rem;

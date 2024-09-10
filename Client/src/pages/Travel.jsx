@@ -5,6 +5,8 @@ import CityList from "../components/CityList";
 import CityDetails from "../components/cityDetails";
 import { searchViaMapToogle, showMapToggle } from "../slices/settingSlice";
 import { search } from "../slices/searchSlice";
+import { Outlet, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   HiMiniMap,
   HiMiniMapPin,
@@ -20,105 +22,64 @@ function Travel() {
     searchViaMap,
     showMap
   );
+  // Get the current URL
+  const navigator = useNavigate();
+  const location = useLocation();
+  console.log(
+    "Current URL------------------------------------------:",
+    location.pathname
+  );
   return (
     <div className={styles.travelMain}>
-      {showMap ? (
-        <>
-          <CityList classname={styles.travelMainItem} />
-          <Map classname={styles.travelMainItem} />
-          <div className={styles.btns}>
-            <button
-              onClick={() => {
-                dispatch(showMapToggle());
-                // dispatch(searchViaMapToogle());
-              }}
-            >
-              {showMap ? (
-                <>
-                  <HiOutlineBookOpen className={styles.icon} />
-                  <span>show details</span>
-                </>
-              ) : (
-                <>
-                  <HiMiniMap className={styles.icon} /> <span>Show map</span>
-                </>
-              )}
-            </button>
-            <button
-              onClick={() => {
-                if (searchType === "map") {
-                  dispatch(search({ searchType: "country", searchValue: "" }));
-                } else {
-                  dispatch(search({ searchType: "map", searchValue: "" }));
-                }
-                if (!showMap) {
-                  dispatch(showMapToggle());
-                }
-                dispatch(searchViaMapToogle());
-              }}
-            >
-              {searchType === "map" ? (
-                <>
-                  <HiOutlinePencil className={styles.icon} />
-                  <span>Normal Search</span>
-                </>
-              ) : (
-                <>
-                  <HiMiniMapPin className={styles.icon} />
-                  <span> Map Search</span>
-                </>
-              )}
-            </button>
-          </div>
-        </>
-      ) : (
-        <>
-          <CityList />
-          <CityDetails classname={styles.travelMainItem} />
-          <div className={styles.btns}>
-            <button
-              onClick={() => {
-                dispatch(showMapToggle());
-                // dispatch(search({ searchType: "map", searchValue: "" }));
-              }}
-            >
-              {showMap ? (
-                <>
-                  <HiOutlineBookOpen className={styles.icon} />
-                  <span>show details</span>
-                </>
-              ) : (
-                <>
-                  <HiMiniMap className={styles.icon} /> <span>Show map</span>
-                </>
-              )}
-            </button>
-            <button
-              onClick={() => {
-                if (searchType === "map") {
-                  dispatch(search({ searchType: "country", searchValue: "" }));
-                  dispatch(searchViaMapToogle());
-                } else {
-                  dispatch(search({ searchType: "map", searchValue: "" }));
-                  dispatch(searchViaMapToogle());
-                }
-              }}
-            >
-              {searchType === "map" ? (
-                <>
-                  <HiOutlinePencil className={styles.icon} />
-                  <span>Normal Search</span>
-                </>
-              ) : (
-                <>
-                  <HiMiniMapPin className={styles.icon} />
-                  <span> Map Search</span>
-                </>
-              )}
-            </button>
-          </div>
-        </>
-      )}
+      <Outlet className={styles.travelMainItem} />
+      <div className={styles.btns}>
+        <button
+          onClick={() => {
+            dispatch(showMapToggle());
+            if (showMap) {
+              navigator("search");
+            } else {
+              navigator("map");
+            }
+            // dispatch(search({ searchType: "map", searchValue: "" }));
+          }}
+        >
+          {showMap ? (
+            <>
+              <HiOutlineBookOpen className={styles.icon} />
+              <span>show List</span>
+            </>
+          ) : (
+            <>
+              <HiMiniMap className={styles.icon} /> <span>Show map</span>
+            </>
+          )}
+        </button>
+        {/* this is where one btn ends and another starts ------>>>>*/}
+        <button
+          onClick={() => {
+            if (searchType === "map") {
+              dispatch(search({ searchType: "country", searchValue: "" }));
+              dispatch(searchViaMapToogle());
+            } else {
+              dispatch(search({ searchType: "map", searchValue: "" }));
+              dispatch(searchViaMapToogle());
+            }
+          }}
+        >
+          {searchType === "map" ? (
+            <>
+              <HiOutlinePencil className={styles.icon} />
+              <span>Normal Search</span>
+            </>
+          ) : (
+            <>
+              <HiMiniMapPin className={styles.icon} />
+              <span> Map Search</span>
+            </>
+          )}
+        </button>
+      </div>
     </div>
   );
 }

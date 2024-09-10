@@ -1,4 +1,4 @@
-// import styles from "./Map.module.css";
+// import styles from './Map.module.css'
 import {
   MapContainer,
   TileLayer,
@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMapCenterCoords } from "../slices/searchSlice";
 import { useGetCities } from "../hooks/useGetCities";
 import { cityClicked } from "../slices/curCitySlice";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 // import { useQueryClient } from "@tanstack/react-query";
@@ -73,7 +73,7 @@ function ShowOnMap({ city }) {
       "boid u just clickecd on the city name =========>>",
       city.cityName
     );
-    // navigator(`/travel/citydetail/${city._id}`);
+    navigator(`/travel/citydetail/${city._id}`);
   };
   //custom marker
   const eggMarkerIcon = new L.Icon({
@@ -86,21 +86,18 @@ function ShowOnMap({ city }) {
     iconAnchor: [16, 32], // Set the anchor point of your icon
     popupAnchor: [0, -32], // Set the popup anchor of your icon
   });
-  // const handlePopClick = () => {
-  //   navigator(`/travel/citydetail/${city._id}`);
-  // };
+
   return (
     <Marker
       position={[city.lat, city.lng]}
       eventHandlers={{ click: handleMarkerClick }}
       icon={eggMarkerIcon}
     >
-      <Popup closeOnClick={true}>
+      <Popup>
         {city.cityName && <span>{city.cityName}</span>}
         {city.todos.length && (
           <div>{city.todos.length} attractions found !!</div>
         )}
-        <Link to={`/travel/citydetail/${city._id}`}>check</Link>
       </Popup>
     </Marker>
   );

@@ -2,10 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./CityItem.module.css";
 import Tags from "./Tags";
 import { cityClicked } from "../slices/curCitySlice";
+import { useNavigate } from "react-router-dom";
 function CityItem({ city }) {
   const datay = useSelector((state) => state.curCity.cityId);
   // console.log(datay);
   const dispatch = useDispatch();
+  const navigator = useNavigate();
   return (
     <div
       className={`${styles.CityItem} ${
@@ -25,6 +27,7 @@ function CityItem({ city }) {
             lng: city.lng,
           })
         );
+        navigator(`/travel/citydetail/${city._id}`);
       }}
     >
       {/* intro */}
