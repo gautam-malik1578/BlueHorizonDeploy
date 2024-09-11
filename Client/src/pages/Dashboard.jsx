@@ -89,7 +89,7 @@ function Dashboard() {
         </Link>
         <span>&copy; blue Horizon @2024</span>
       </aside>
-      <div>
+      <div className={styles.bucket}>
         {show === "popular" && <Popular />}
         {show === "liked" && <Liked />}
         {show === "favorite" && <MyFavs />}

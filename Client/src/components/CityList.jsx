@@ -22,6 +22,7 @@ function CityList() {
   return (
     <div className={styles.cityList}>
       {/* <div className={styles.searchbar}></div> */}
+      {/* { searchType=="map"?} */}
       <SearchBar setCityData={setCityData} />
       <div className={styles.list}>
         {!searchValue && searchType !== "map" && <SearchSuggetion />}

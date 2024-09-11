@@ -33,7 +33,7 @@ function Travel() {
     <div className={styles.travelMain}>
       <Outlet className={styles.travelMainItem} />
       <div className={styles.btns}>
-        <button
+        {/* <button
           onClick={() => {
             dispatch(showMapToggle());
             if (showMap) {
@@ -54,16 +54,18 @@ function Travel() {
               <HiMiniMap className={styles.icon} /> <span>Show map</span>
             </>
           )}
-        </button>
+        </button> */}
         {/* this is where one btn ends and another starts ------>>>>*/}
         <button
           onClick={() => {
             if (searchType === "map") {
               dispatch(search({ searchType: "country", searchValue: "" }));
               dispatch(searchViaMapToogle());
+              navigator("search");
             } else {
               dispatch(search({ searchType: "map", searchValue: "" }));
               dispatch(searchViaMapToogle());
+              navigator("map");
             }
           }}
         >

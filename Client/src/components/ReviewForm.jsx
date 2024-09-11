@@ -53,24 +53,24 @@ function ReviewForm({ attractionId, setShowForm, attractionName }) {
         <label htmlFor="content">tell us what do think</label>
         <textarea
           className={styles.content}
-          placeholder=" your review will be  visible to all the users"
+          placeholder=" your post will be  visible to all the users"
           id="content"
           type="text"
           {...register("content")}
         />
       </div>
       <div className={styles.btns}>
-        <button className={styles.creatbtn}>Create Review</button>
-        <button disabled className={styles.creatbtn}>
-          Draft Review
-        </button>
+        <button className={styles.creatbtn}>Create Post</button>
+        {/* <button disabled className={styles.creatbtn}>
+          Draft Post
+        </button> */}
         <button
           className={styles.creatbtn}
           onClick={() => {
             setShowForm(false);
           }}
         >
-          All Reviews &rarr;
+          All posts &rarr;
         </button>
       </div>
     </form>

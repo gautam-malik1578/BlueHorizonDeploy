@@ -17,7 +17,7 @@
   text-transform: capitalize;
   font-size: var(--font-size-md);
   height: 53.5px;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   /* padding-left: 30px; */
   /* position: absolute; */
   /* top: 0; */
@@ -25,11 +25,15 @@
   /* width: 60%; */
   z-index: 100;
   background-color: #fff;
+  width: 90%;
   /* background-color: pink; */
 }
 .abc {
   /* transform: translateY(10px); */
   /* border-left: 1px solid var(--color-black); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 :global(.leaflet-popup-content-wrapper) {
@@ -109,4 +113,25 @@
 }
 :global(.leaflet-left) {
   display: none;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  padding: 0;
+  color: var(--color-white);
+  font-weight: 500;
+}
+.backbtn {
+  cursor: pointer;
+  padding: 7px 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-blue);
+}
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
 }

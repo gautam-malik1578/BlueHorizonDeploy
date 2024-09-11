@@ -65,7 +65,7 @@ function AttractionItem({ type = "like", attraction }) {
               handleLikeRemove(attraction._id);
             }}
           >
-            remove from likes
+            remove
           </button>
         )}
         {type === "fav" && (
@@ -74,7 +74,7 @@ function AttractionItem({ type = "like", attraction }) {
               handleFavRemove(attraction._id);
             }}
           >
-            remove from favs
+            remove
           </button>
         )}
       </div>

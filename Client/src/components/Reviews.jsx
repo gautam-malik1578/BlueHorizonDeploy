@@ -7,7 +7,10 @@ import styles from "./Reviews.module.css";
 import ReviewForm from "./ReviewForm";
 import UpdateReviewForm from "./UpdateReviewForm";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { IoArrowBackOutline } from "react-icons/io5";
 function Reviews({ attractionId, attractionName }) {
+  const navigator = useNavigate();
   const [showForm, setShowForm] = useState(false);
   const [showUpdateForm, setShowUpdateForm] = useState(false);
   const [wannbeUpdate, setWannabeUpdate] = useState({});
@@ -17,6 +20,14 @@ function Reviews({ attractionId, attractionName }) {
     <div className={styles.reviews}>
       {!showForm && !showUpdateForm ? (
         <div className={styles.reviewsIntro}>
+          <button
+            className={styles.backbtn}
+            onClick={() => {
+              navigator(-1);
+            }}
+          >
+            <IoArrowBackOutline className={styles.icon} />
+          </button>
           <p>{`we found ${data?.length} Posts on ${attractionName}`}</p>
           <button
             className={styles.addReview}
@@ -29,6 +40,7 @@ function Reviews({ attractionId, attractionName }) {
           </button>
         </div>
       ) : null}
+      {/* by here we had the to intro part */}
       {showUpdateForm ? (
         <UpdateReviewForm
           wannbeUpdate={wannbeUpdate}

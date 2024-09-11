@@ -3,13 +3,14 @@ import Attraction from "./Attraction";
 import styles from "./cityDetails.module.css";
 import { useQuery } from "@tanstack/react-query";
 import { getAllatractionsOnACity } from "../services/getCities";
+import { useNavigate } from "react-router-dom";
+import { IoArrowBackOutline } from "react-icons/io5";
 import Loader from "./Loader";
 function CityDetails() {
   const selectedCityId = useSelector((state) => state.curCity.cityId);
   const cityName = useSelector((state) => state.curCity.name);
-
   const token = useSelector((state) => state.user.token);
-
+  const navigator = useNavigate();
   const { data, isLoading, isError, isFetching } = useQuery({
     queryKey: ["attractionsOnACity", selectedCityId],
     queryFn: () => getAllatractionsOnACity(selectedCityId, token),
@@ -31,7 +32,17 @@ function CityDetails() {
 
   return (
     <div className={styles.cityDetails}>
-      <h2 className={styles.heading}>popular attractions of {cityName}</h2>
+      <div className={styles.parent}>
+        <button
+          className={styles.backbtn}
+          onClick={() => {
+            navigator(-1);
+          }}
+        >
+          <IoArrowBackOutline className={styles.icon} />
+        </button>
+        <h2 className={styles.heading}>popular attractions of {cityName}</h2>
+      </div>
       <div className={styles.abc}>
         {data
           ? data.map((attraction) => (

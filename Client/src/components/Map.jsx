@@ -13,8 +13,9 @@ import { setMapCenterCoords } from "../slices/searchSlice";
 import { useGetCities } from "../hooks/useGetCities";
 import { cityClicked } from "../slices/curCitySlice";
 import { useNavigate, Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
-import { useState } from "react";
+// import { useState } from "react";
 // import { useQueryClient } from "@tanstack/react-query";
 function Map({ classname }) {
   console.log(
@@ -39,6 +40,15 @@ function Map({ classname }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <HandleClickMap />
+      {data?.length > 0
+        ? toast.success(`${data?.length} results found `, {
+            icon: "😎",
+            style: { color: "var(--color-red)", textTransform: "capitalize" },
+            duration: 700,
+          })
+        : null}
+      {console.log("this is the data<<<<----->>", data)}
+
       {data?.map((city) => (
         <ShowOnMap key={city._id} city={city} />
       ))}

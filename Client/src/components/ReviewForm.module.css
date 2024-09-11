@@ -7,6 +7,8 @@
   border-radius: var(--border-radius-sm);
   padding: 1rem;
   margin-top: 0;
+  /* background-color: white; */
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); */
 }
 .form input {
   outline: none;

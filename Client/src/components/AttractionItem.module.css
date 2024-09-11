@@ -3,13 +3,14 @@
   color: var(--color-blue);
   display: flex;
   min-height: 10rem;
-  border: 1px solid var(--color-blue);
+  /* border: 1px solid var(--color-blue); */
   border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 1rem;
   width: 80%;
   padding: 1rem;
+  /* background-color: #fff; */
   /* margin: auto; */
 }
 .imgBox {
@@ -35,11 +36,11 @@
   transform: scale(1.2);
 }
 .contentBox {
-  /* background-color: paleturquoise; */
   display: flex;
   flex-direction: column;
   /* background-color: #fff; */
   /* padding: 0.5rem */
+  /* background-color: paleturquoise; */
   padding: 0;
 }
 .meta {

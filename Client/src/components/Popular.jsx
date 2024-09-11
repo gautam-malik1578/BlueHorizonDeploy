@@ -50,7 +50,7 @@ function Popular() {
   return showChart ? (
     <PieChart data={chartData} chatToggle={setShowChart} />
   ) : (
-    <div style={{ backgroundColor: "whitesmoke" }} className={styles.popular}>
+    <div style={{ backgroundColor: "white" }} className={styles.popular}>
       <p>Here are Top trending attractions which got people buzzing!!! </p>
       <button
         className={styles.chartBtn}

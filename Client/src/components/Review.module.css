@@ -1,15 +1,21 @@
 .review {
   width: 90%;
   /* align-self: flex-start; */
-  min-height: 150px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: var(--border-radius-sm);
-  /* background-color: yellowgreen; */
   background-color: var(--color-grey-1);
   background-color: whitesmoke;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  /* background-color: yellowgreen; */
   font-size: 0.8rem;
   padding: 0.5rem;
   margin-top: 0;
+  /* min-height: 200px;
+  overflow: scroll; */
+  height: auto;
+  max-height: 92vh;
+  /* overflow: hidden; */
   /* display: flex;
   flex-direction: column;
   align-items: center; */
@@ -17,8 +23,9 @@
 .review:hover {
   cursor: pointer;
   background-color: var(--color-grey-2);
+  background-color: whitesmoke;
   transition: all 0.3s;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
 }
 .reviewAutor {
   text-transform: capitalize;
