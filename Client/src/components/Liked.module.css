@@ -4,6 +4,7 @@
   align-items: center;
   gap: 1rem;
   height: 92vh;
+  overflow: scroll;
   /* background-color: yellow; */
 }
 .head {

@@ -16,7 +16,8 @@
   border-right: 2px solid var(--color-black);
   flex-basis: 100%;
   background-color: #fff;
-  /* background-color: pink; */
+  background-color: pink;
+  background-color: whitesmoke;
   /* background: red; */
   height: 100%;
   /* overflow: hidden; */

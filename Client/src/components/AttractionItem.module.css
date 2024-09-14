@@ -10,8 +10,14 @@
   gap: 1rem;
   width: 80%;
   padding: 1rem;
+  transition: all 0.3s;
+  /* overflow: scroll; */
   /* background-color: #fff; */
   /* margin: auto; */
+}
+.attraction:hover {
+  transform: translateX(-10px);
+  cursor: pointer;
 }
 .imgBox {
   /* background-color: yellowgreen; */
@@ -38,7 +44,7 @@
 .contentBox {
   display: flex;
   flex-direction: column;
-  /* background-color: #fff; */
+  background-color: #fff;
   /* padding: 0.5rem */
   /* background-color: paleturquoise; */
   padding: 0;

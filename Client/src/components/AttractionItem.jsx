@@ -43,16 +43,22 @@ function AttractionItem({ type = "like", attraction }) {
     });
   }
   return (
-    <div className={styles.attraction}>
+    <div
+      className={styles.attraction}
+      style={{
+        backgroundColor: "white",
+        boxShadow: "10px 10px 20px rgba(0,0,0,0.1)",
+      }}
+    >
       <div className={styles.imgBox}>
         <figure>
           <img src={attraction.imgs[0]} alt="attractionPic" />
         </figure>
       </div>
-      <div className={styles.contentBox}>
-        <div className={styles.meta}>
+      <div className={styles.contentBox} style={{ backgroundColor: "white" }}>
+        <div className={styles.meta} style={{ backgroundColor: "white" }}>
           <h1>{attraction.attractionName}</h1>
-          <div>
+          <div style={{ backgroundColor: "white" }}>
             <TbThumbUpFilled className={styles.icon} />
             <span>{attraction.likes}</span>
           </div>

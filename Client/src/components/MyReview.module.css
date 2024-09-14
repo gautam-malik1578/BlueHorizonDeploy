@@ -6,7 +6,8 @@
   /* justify-content: center; */
   gap: 1rem;
   width: 80%;
-  min-height: 10rem;
+  /* min-height: 10rem; */
+  height: auto;
   border-radius: 12px;
   overflow: hidden;
   padding: 10px;
