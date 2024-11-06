@@ -66,3 +66,29 @@
 .info {
   flex-grow: 1;
 }
+@media only screen and (max-width: 500px) {
+  .review {
+    width: 360px;
+    height: auto;
+  }
+  .review figure {
+    width: 70px;
+    height: 70px;
+  }
+  .meta {
+    font-size: 6px;
+  }
+  .content {
+    font-size: 8px;
+  }
+  .btns button {
+    padding: 5px 5px;
+    font-size: 8px;
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .review {
+    width: 290px;
+  }
+}

@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import NotFound from "./NotFound";
 function Liked() {
   const { data, error, isLoading } = useFindMyLikes();
-  const len = data?.data.likedAttractions[0].attractionsIds.length; //len of the arr
+  const len = data?.data?.likedAttractions[0]?.attractionsIds?.length; //len of the arr
   if (isLoading) {
     return <Loader />;
   }
@@ -19,7 +19,7 @@ function Liked() {
           className={styles.head}
         >{`we found ${len} attractions liked by you`}</h1>
       )}
-      {data?.data.likedAttractions[0].attractionsIds.map((attraction) => (
+      {data?.data?.likedAttractions[0]?.attractionsIds.map((attraction) => (
         <AttractionItem
           key={attraction._id}
           type="like"

@@ -43,3 +43,15 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
+@media only screen and (max-width: 380px) {
+  .btns {
+    /* gap: ; */
+  }
+  .btns button {
+    font-size: 12px;
+    padding: 5px 10px;
+    /* width: 60px; */
+  }
+}
+@media only screen and (max-width: 380px) {
+}

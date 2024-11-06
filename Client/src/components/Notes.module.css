@@ -30,4 +30,6 @@
   transition: all 0.3s;
   cursor: pointer;
   text-transform: capitalize;
+  background-color: var(--color-blue);
+  color: white;
 }

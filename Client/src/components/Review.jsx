@@ -41,7 +41,7 @@ function Review({
             </figure>
             <span className={styles.reviewAutor}>{review.author}</span>
             <span className={styles.reviewDate} style={{ marginRight: "auto" }}>
-              {review.createdAt}{" "}
+              {review.createdAt.split("T")[0]}{" "}
             </span>
             {review.isUpdated && <Tags type="green">updated</Tags>}
           </div>
@@ -54,7 +54,7 @@ function Review({
                     handleDelete();
                   }}
                 >
-                  delete review
+                  delete
                 </button>
                 <button
                   onClick={() => {
@@ -69,7 +69,7 @@ function Review({
                     });
                   }}
                 >
-                  update review
+                  update
                 </button>
               </>
             ) : null}

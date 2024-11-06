@@ -3,13 +3,21 @@
   color: black;
   /* background-color: yellow; */
   border-radius: var(--border-radius-lg);
-  width: 100%;
+  width: 80%;
   border: 1px solid transparent;
   padding: 5px;
   transition: all 0.3s;
   background-color: whitesmoke;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+}
+.cityMeta {
+  flex: 0 0 80%;
+}
+.Imgslider {
+  flex: 0 0 20%;
 }
 .CityItem:hover {
   border: 1px solid transparent;
@@ -62,4 +70,66 @@
   /* background-color: var(--color-grey-1); */
   /* transform: translateX(-10px); */
   border: 1px solid var(--color-blue);
+}
+.Imgslider {
+  margin-left: auto;
+}
+@media only screen and (max-width: 500px) {
+  .CityItem {
+    font-size: 7px;
+    height: 120px;
+    overflow: hidden;
+    width: 100%;
+    width: 410px;
+    padding: 3px;
+  }
+  .cityMeta {
+    width: 270px;
+    /* background-color: pink; */
+  }
+  .intro {
+  }
+  .cityname {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .todos {
+    font-size: 10px;
+    gap: 10px;
+  }
+  .todos p {
+    display: none;
+  }
+  .tagsList {
+    gap: 2px;
+    font-size: 10px;
+    /* display: none; */
+  }
+  .subIntro {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .Imgslider {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .CityItem {
+    width: 360px;
+  }
+  .tagsList {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .CityItem {
+    width: 290px;
+  }
+  .tagsList {
+    font-size: 6px;
+  }
 }

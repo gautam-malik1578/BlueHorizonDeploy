@@ -8,8 +8,8 @@ function MyFavs() {
   if (isLoading) {
     return <Loader />;
   }
-  console.log(data?.data.favAttractions[0].attractionIds);
-  const len = data?.data.favAttractions[0].attractionIds.length;
+  console.log(data?.data?.favAttractions[0]?.attractionIds);
+  const len = data?.data?.favAttractions[0]?.attractionIds.length;
   console.log(len);
   if (len === 0) {
     return <NotFound text="No Favs Yet :(" />;
@@ -21,7 +21,7 @@ function MyFavs() {
           className={styles.head}
         >{`we found ${len} of your favorite attractions`}</h1>
       )}
-      {data?.data.favAttractions[0].attractionIds.map((attraction) => (
+      {data?.data?.favAttractions[0]?.attractionIds.map((attraction) => (
         <AttractionItem
           key={attraction._id}
           type="fav"

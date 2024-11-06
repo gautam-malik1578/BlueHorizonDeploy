@@ -11,16 +11,16 @@ export function useSignUp() {
     mutationFn: async (data) => await signup(data),
     onSuccess: (data) => {
       console.log("boi we are in success of sign mutate:)))", data);
-      dispatch(setToken(data.token));
-      dispatch(toggleLogIn());
-      dispatch(
-        setUserData({
-          userId: data.userId,
-          username: data.username,
-          gender: data.gender,
-        })
-      );
-      toast.success(`welcome !! ${data.username}`, {
+      // dispatch(setToken(data.token));
+      // dispatch(toggleLogIn());
+      // dispatch(
+      //   setUserData({
+      //     userId: data.userId,
+      //     username: data.username,
+      //     gender: data.gender,
+      //   })
+      // );
+      toast.success(`welcome !! ${data.username} plz verify our email`, {
         icon: "😁",
         style: {
           backgroundColor: "var(--color-green)",

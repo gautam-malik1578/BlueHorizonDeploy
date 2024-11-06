@@ -16,21 +16,21 @@ function MyReview({ review, handleDeleteReview, handleViewAttraction }) {
         </div>
         <p className={styles.content}>{review.content}</p>
         <div className={styles.btns}>
-          <button onClick={handleViewAttraction}>view attraction</button>
+          <button onClick={handleViewAttraction}>view</button>
           <button
             style={showForm ? { backgroundColor: "var(--color-red)" } : {}}
             onClick={() => {
               setShowForm((showForm) => !showForm);
             }}
           >
-            {showForm ? "cancel" : "update review"}
+            {showForm ? "cancel" : "update"}
           </button>
           <button
             onClick={() => {
               handleDeleteReview(review._id, review.attraction);
             }}
           >
-            delete review
+            delete
           </button>
         </div>
         {showForm && (

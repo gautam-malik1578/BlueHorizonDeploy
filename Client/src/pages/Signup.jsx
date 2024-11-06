@@ -20,7 +20,7 @@ function SignUp() {
     mutate(data, {
       onSuccess: () => {
         reset();
-        navigate("/travel");
+        navigate("/verify");
       },
     });
   }
@@ -56,16 +56,19 @@ function SignUp() {
             type="email"
             id="email"
             {...register("email", {
-              required: { value: true, message: "plz provide an email" },
+              required: { value: true, message: "Please provide an email" },
               validate: (value) => {
-                if (value.includes("chitkara.edu.in")) {
+                // Improved regex to check for a valid email format with at least two characters after the final dot
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                if (emailPattern.test(value)) {
                   return true;
                 } else {
-                  return "plz signup with your chitkara email id";
+                  return "Please enter a valid email address";
                 }
               },
             })}
           />
+
           {errors.email && <p>{errors.email.message}</p>}
         </div>
         <div>
@@ -108,7 +111,7 @@ function SignUp() {
           <button>signup</button>
         </div>
       </form>
-      <Link to="/login">back to login</Link>
+      <Link to="/login">Back to login</Link>
     </div>
   );
 }

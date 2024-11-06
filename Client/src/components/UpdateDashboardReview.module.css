@@ -35,3 +35,15 @@
 .form button:hover {
   background-color: var(--color-red);
 }
+@media only screen and (max-width: 500px) {
+  .form label {
+    font-size: 8px;
+  }
+  .form textarea {
+    font-size: 8px;
+  }
+  .form button {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+}

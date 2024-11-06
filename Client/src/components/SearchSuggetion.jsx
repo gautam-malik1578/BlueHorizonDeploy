@@ -5,8 +5,8 @@ function SearchSuggetion() {
     <div className={styles.suggestion}>
       <Loader
         text="Hi ! search of places you like or fancy 😁"
-        height={300}
-        width={300}
+        height={200}
+        width={200}
       />
     </div>
   );

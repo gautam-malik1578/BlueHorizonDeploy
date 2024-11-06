@@ -26,13 +26,13 @@ function NavBar() {
     <div className={styles.navbar}>
       <Logo />
       <NavOptions>
-        <NavLink className={styles.navItem} to="/">
+        {/* <NavLink className={styles.navItem} to="/">
           <BiHome className={styles.icon} />
           <span>Home</span>
-        </NavLink>
+        </NavLink> */}
         <NavLink className={styles.navItem} to="/travel/search">
           <BiMapPin className={styles.icon} />
-          <span>Travel</span>
+          <span>Explore</span>
         </NavLink>
         {isLoggedIn ? (
           <NavLink className={styles.navItem} to="/dashboard/popular">

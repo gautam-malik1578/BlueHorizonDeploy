@@ -42,6 +42,11 @@ function AttractionItem({ type = "like", attraction }) {
       },
     });
   }
+  const words = attraction?.description?.split(" ");
+
+  // Get the first 35 words and join them back with a space
+  let shortDescription = words?.slice(0, 30)?.join(" ");
+  shortDescription = shortDescription + "....";
   return (
     <div
       className={styles.attraction}
@@ -64,7 +69,8 @@ function AttractionItem({ type = "like", attraction }) {
           </div>
         </div>
         <h3>{attraction.cityName}</h3>
-        <p className={styles.description}>{attraction.description}</p>
+        {/* <p className={styles.description}>{attraction.description}</p> */}
+        <p className={styles.description}>{shortDescription}</p>
         {type === "like" && (
           <button
             onClick={() => {

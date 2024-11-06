@@ -33,28 +33,6 @@ function Travel() {
     <div className={styles.travelMain}>
       <Outlet className={styles.travelMainItem} />
       <div className={styles.btns}>
-        {/* <button
-          onClick={() => {
-            dispatch(showMapToggle());
-            if (showMap) {
-              navigator("search");
-            } else {
-              navigator("map");
-            }
-            // dispatch(search({ searchType: "map", searchValue: "" }));
-          }}
-        >
-          {showMap ? (
-            <>
-              <HiOutlineBookOpen className={styles.icon} />
-              <span>show List</span>
-            </>
-          ) : (
-            <>
-              <HiMiniMap className={styles.icon} /> <span>Show map</span>
-            </>
-          )}
-        </button> */}
         {/* this is where one btn ends and another starts ------>>>>*/}
         <button
           onClick={() => {

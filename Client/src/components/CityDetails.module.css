@@ -135,3 +135,11 @@
   justify-content: center;
   border-bottom: 1px solid black;
 }
+@media only screen and (max-width: 500px) {
+  .heading {
+    font-size: 18px;
+  }
+  .cityDetails {
+    width: 100%;
+  }
+}

@@ -14,7 +14,7 @@
   /* min-height: 200px;
   overflow: scroll; */
   height: auto;
-  max-height: 92vh;
+  /* max-height: 92vh; */
   /* overflow: hidden; */
   /* display: flex;
   flex-direction: column;
@@ -78,4 +78,32 @@
 }
 .reviewContent {
   font-size: 1rem;
+}
+@media only screen and (max-width: 500px) {
+  .reviewContent {
+    font-size: 12px;
+  }
+  .btns {
+    gap: 7px;
+  }
+  .btns button {
+    width: 85px;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .review {
+    width: 360px;
+    overflow: hidden;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .review {
+    /* background-color: gold; */
+    width: 290px;
+  }
+  .reviewDate {
+    font-size: 6px;
+  }
 }

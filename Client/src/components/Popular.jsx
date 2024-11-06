@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import { HiMiniHeart } from "react-icons/hi2";
 import { TbThumbUpFilled } from "react-icons/tb";
 import PieChart from "./PieChart";
+import BarChart from "./BarChart";
 
 function Popular() {
   const [selectedAttraction, setSelectedAttraction] = useState(null);
@@ -31,6 +32,8 @@ function Popular() {
   // };
   const labels = popData.map((item) => item.attractionName);
   const data = popData.map((item) => item.likes);
+  // const Images = popData.map((item) => item?.imgs[0]);
+  // console.log("this is what we ahve has imgs arrr", Images);
   const chartData = {
     labels,
     datasets: [
@@ -48,7 +51,8 @@ function Popular() {
     ],
   };
   return showChart ? (
-    <PieChart data={chartData} chatToggle={setShowChart} />
+    // <PieChart data={chartData} chatToggle={setShowChart} />
+    <BarChart data={chartData} chatToggle={setShowChart} />
   ) : (
     <div style={{ backgroundColor: "white" }} className={styles.popular}>
       <p>Here are Top trending attractions which got people buzzing!!! </p>

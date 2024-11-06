@@ -56,6 +56,7 @@ function ReviewForm({ attractionId, setShowForm, attractionName }) {
           placeholder=" your post will be  visible to all the users"
           id="content"
           type="text"
+          required={true}
           {...register("content")}
         />
       </div>

@@ -1,8 +1,16 @@
 /* :global(.leaflet-popup-content-wrapper) {
   background-color: purple;
 } */
+.parent {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  /* margin-top: 20px; */
+  transform: translateY(30px);
+}
 :global(.leaflet-popup-content) {
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 :global(.leaflet-popup-content-wrapper) {

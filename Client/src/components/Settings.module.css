@@ -66,3 +66,14 @@
 .form div select option {
   cursor: pointer;
 }
+@media only screen and (max-width: 500px) {
+  .settings {
+    height: 90vh;
+  }
+  .form div label {
+    font-size: 8px;
+  }
+  .form div input {
+    font-size: 8px;
+  }
+}

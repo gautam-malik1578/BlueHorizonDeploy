@@ -19,18 +19,20 @@ function Attraction({ attraction }) {
         />
         {/* {console.log("😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎", attraction?.imgs[0])} */}
       </figure>
-      <AttractionDetails
-        attraction={attraction}
-        setShowFeature={setShowFeature}
-        showfeature={showfeature}
-      />
-      {showfeature === "reviews" && (
-        <Reviews
-          attractionId={attraction._id}
-          attractionName={attraction.attractionName}
+      <div>
+        <AttractionDetails
+          attraction={attraction}
+          setShowFeature={setShowFeature}
+          showfeature={showfeature}
         />
-      )}
-      {showfeature === "note" && <Notes attractionId={attraction._id} />}
+        {showfeature === "reviews" && (
+          <Reviews
+            attractionId={attraction._id}
+            attractionName={attraction.attractionName}
+          />
+        )}
+        {showfeature === "note" && <Notes attractionId={attraction._id} />}
+      </div>
     </div>
   );
 }

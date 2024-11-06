@@ -65,3 +65,39 @@
   transform: translateY(-5px);
   background-color: purple;
 }
+@media only screen and (max-width: 380px) {
+  .name {
+    font-size: 14px;
+  }
+  .icon {
+    height: 14px;
+    width: 14px;
+  }
+  .numLikes {
+    font-size: 12px;
+  }
+  .showBtn {
+    font-size: 10px;
+    padding: 3px 6px;
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .attractionIntro {
+  }
+  .description {
+    font-size: 12px;
+  }
+  .penchent {
+    /* background-color: pink; */
+    /* padding: 3px; */
+    gap: 5px;
+  }
+  /* .icon {
+    height: 12px;
+    width: 12px;
+  }
+  .numLikes {
+    font-size: 12px;
+  } */
+}

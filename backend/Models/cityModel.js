@@ -20,6 +20,9 @@ const citySchema = new mongoose.Schema({
   currency: {
     type: String,
   },
+  imgs: {
+    type: [String],
+  },
 
   todos: [String],
   location: {

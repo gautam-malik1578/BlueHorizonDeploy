@@ -47,3 +47,20 @@
   color: var(--color-blue);
   color: var(--color-white);
 }
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    height: 8vh; /* Keep the navbar height the same */
+    padding: 0 5px;
+  }
+
+  .navItem:link,
+  .navItem:visited {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+}
+@media only screen and (max-width: 400px) {
+  .navItem:link span {
+    display: none;
+  }
+}

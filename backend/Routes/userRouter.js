@@ -12,10 +12,13 @@ import {
   protect,
   resetPassword,
   signUp,
+  sendOtp,
+  Verify,
 } from "../controllers/authController.js";
 const Router = express.Router();
 Router.route("/").get(getAllUsers).post(createUser);
-
+Router.route("/verify").post(Verify);
+Router.route("/getotp").post(sendOtp);
 Router.route("/signup").post(signUp);
 Router.route("/login").post(login);
 Router.route("/resetpassword").post(protect, resetPassword);

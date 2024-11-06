@@ -89,3 +89,17 @@
 /* .bucket {
   background-color: pink;
 } */
+@media only screen and (max-width: 500px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard aside p,
+  .dashboard aside span {
+    display: none;
+  }
+  .dashboard aside {
+    display: flex;
+    flex-direction: row;
+  }
+}

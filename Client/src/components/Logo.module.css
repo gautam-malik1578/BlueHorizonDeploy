@@ -34,3 +34,15 @@
   align-items: center;
   justify-content: center;
 }
+
+/* now the media query --------------------- */
+@media only screen and (max-width: 500px) {
+  .fig {
+    height: 30px;
+    width: 30px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}

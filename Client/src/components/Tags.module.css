@@ -33,3 +33,24 @@
   opacity: 0.6;
   padding: 10px;
 }
+@media only screen and (max-width: 500px) {
+  .tags {
+    padding: 0 3px;
+  }
+  .blue {
+  }
+  .green {
+  }
+  .red {
+  }
+}
+@media only screen and (max-width: 310px) {
+  .tags {
+    padding: 0 2px;
+    font-size: 6px;
+  }
+  .green {
+    /* padding: 0 2px; */
+    font-size: 6px;
+  }
+}

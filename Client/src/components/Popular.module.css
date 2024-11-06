@@ -114,3 +114,18 @@
   cursor: pointer;
   border: none;
 }
+@media only screen and (max-width: 500px) {
+  .popular {
+    width: 400px;
+  }
+  .attractionsName {
+    width: 400px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    /* background-color: yellow; */
+  }
+  .btnOptions {
+    font-size: 10px;
+    width: auto;
+  }
+}

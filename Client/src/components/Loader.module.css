@@ -8,6 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 9px;
+  overflow: hidden;
   /* background-color: purple; */
 }
 .loader p {
@@ -18,4 +20,9 @@
 }
 .loader:first-child {
   padding: 20px;
+}
+@media only screen and (max-width: 310px) {
+  .loader p {
+    font-size: 10px;
+  }
 }

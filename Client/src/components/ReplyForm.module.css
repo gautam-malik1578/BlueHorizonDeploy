@@ -10,10 +10,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* background-color: forestgreen; */
 }
 .form div label {
   width: 25%;
   text-transform: capitalize;
+  /* font-size: 8px; */
 }
 .form div input {
   width: 75%;
@@ -42,6 +44,7 @@
   align-self: self-start;
   /* background-color: purple; */
   width: 100%;
+  /* width: 290px; */
 }
 .content textarea {
   width: 100%;
@@ -52,4 +55,14 @@
 }
 .content textarea:focus {
   border: 2px solid var(--color-blue);
+}
+@media only screen and (max-width: 310px) {
+  .form div label {
+    font-size: 10px;
+    width: 45%;
+  }
+  .form div input {
+    width: 55%;
+    font-size: 12px;
+  }
 }

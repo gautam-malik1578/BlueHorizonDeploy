@@ -1,0 +1,23 @@
+/* .chartPage {
+  height: 100%;
+  width: 100%;
+} */
+.bar {
+  height: 500px;
+  width: 100%;
+  /* margin: 0 auto; */
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.chartBtn {
+  width: 100px;
+  padding: 8px 16px;
+  background-color: var(--color-red);
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+}

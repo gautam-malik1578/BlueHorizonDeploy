@@ -1,7 +1,13 @@
 import Lottie from "react-lottie";
 import styles from "./Loader.module.css";
 import areoplane from "../animations/Airplane.json";
-function Loader({ text = "loading", height = 150, width = 150 }) {
+function Loader({
+  text = "loading",
+  height = 150,
+  width = 150,
+  anni = areoplane,
+  showText = true,
+}) {
   // return <div className={styles.loader}>loading.....</div>;
   return (
     <div className={styles.loader}>
@@ -9,7 +15,7 @@ function Loader({ text = "loading", height = 150, width = 150 }) {
         options={{
           loop: true,
           autoplay: true,
-          animationData: areoplane,
+          animationData: anni,
           rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
           },
@@ -18,7 +24,7 @@ function Loader({ text = "loading", height = 150, width = 150 }) {
         width={width}
         isClickToPauseDisabled={true}
       />
-      <p>{text}</p>
+      {showText ? <p>{text}</p> : null}
     </div>
   );
 }

@@ -47,7 +47,6 @@
   margin-left: 75px;
 }
 .form {
-  background-color: yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +65,7 @@
   left: 50%;
   /* background-color: white; */
   background-color: var(--color-blue);
+  /* background-color: yellow; */
 }
 .icon {
   padding: 0;
@@ -90,4 +90,32 @@
   z-index: 100;
   color: transparent;
   border-bottom: 1px solid black;
+}
+@media only screen and (max-width: 500px) {
+  .form {
+    width: 350px;
+    /* font-size: 5px; */
+  }
+  .input {
+    width: 150px;
+    font-size: 12px;
+    padding: 2px;
+  }
+  .input:focus {
+    width: 170px;
+    padding-left: 5px;
+  }
+  .selection {
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .form {
+    width: 280px;
+  }
+  .input {
+    width: 100px;
+    font-size: 10px;
+  }
 }
