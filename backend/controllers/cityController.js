@@ -87,7 +87,7 @@ export const findNearCity = catchAsync(async (req, res, next) => {
       $near: {
         $geometry: {
           type: "Point",
-          coordinates: [req.params.lat, req.params.lng],
+          coordinates: [req.params.lng, req.params.lat],
         },
         $maxDistance: req.params.dis * 1000,
       },
