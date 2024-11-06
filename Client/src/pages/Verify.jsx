@@ -110,6 +110,14 @@ function Verify() {
         </button>
       </form>
       {message && <p className={styles.message}>{message}</p>}
+
+      {/* Show OTP reminder message when OTP is requested */}
+      {/* {isRequestingOtp && !loading && email && ( */}
+      <span className={styles.otpReminder}>
+        Please check in spam as well for the OTP.
+      </span>
+      {/* )} */}
+
       <button
         onClick={handleToggle}
         className={styles.toggleButton}
