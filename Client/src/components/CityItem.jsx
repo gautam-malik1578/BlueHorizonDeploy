@@ -4,7 +4,7 @@ import Tags from "./Tags";
 import { cityClicked } from "../slices/curCitySlice";
 import { useNavigate } from "react-router-dom";
 import PicSlider from "./PicSlider";
-const images = [
+let images = [
   "https://images.pexels.com/photos/5438965/pexels-photo-5438965.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/5458388/pexels-photo-5458388.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -12,6 +12,7 @@ const images = [
 ];
 function CityItem({ city }) {
   const datay = useSelector((state) => state.curCity.cityId);
+  if (city.imgs.length > 0) images = city.imgs;
   // console.log(datay);
   const dispatch = useDispatch();
   const navigator = useNavigate();
