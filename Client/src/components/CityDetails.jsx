@@ -5,10 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 import { getAllatractionsOnACity } from "../services/getCities";
 import { useNavigate } from "react-router-dom";
 import { IoArrowBackOutline } from "react-icons/io5";
+import { useParams } from "react-router-dom";
 import Loader from "./Loader";
 function CityDetails() {
+  // let cityId = null;
+  // let { cityId } = useParams(); // Access cityId from URL
+  // const selectedCityId = cityId;
   const selectedCityId = useSelector((state) => state.curCity.cityId);
-  const cityName = useSelector((state) => state.curCity.name);
+  // const cityName = useSelector((state) => state.curCity.name);
   const token = useSelector((state) => state.user.token);
   const navigator = useNavigate();
   const { data, isLoading, isError, isFetching } = useQuery({
@@ -25,7 +29,7 @@ function CityDetails() {
     // );
     return (
       <div className={styles.cityDetails}>
-        <Loader text="plz Login and select a city " height={300} width={300} />
+        <Loader text="fetching..." height={300} width={300} />
       </div>
     );
   }
@@ -41,7 +45,10 @@ function CityDetails() {
         >
           <IoArrowBackOutline className={styles.icon} />
         </button>
-        <h2 className={styles.heading}>popular attractions of {cityName}</h2>
+        {/* <h2 className={styles.heading}>popular attractions of {cityName}</h2> */}
+        <h2 className={styles.heading}>
+          popular attractions of {data[0].cityName}
+        </h2>
       </div>
       <div className={styles.abc}>
         {data

@@ -19,7 +19,8 @@ import Loader from "./Loader"; // Your Loader component
 import anni1 from "../animations/anni1.json"; // Animation file
 
 function Map({ classname }) {
-  const [showAnimation, setShowAnimation] = useState(true); // Manage animation visibility
+  const val = useSelector((store) => store.setting.StopshowAnnimation);
+  const [showAnimation, setShowAnimation] = useState(val); // Manage animation visibility
 
   // Hide animation after 3 seconds
   useEffect(() => {

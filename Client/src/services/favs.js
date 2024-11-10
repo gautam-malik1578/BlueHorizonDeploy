@@ -24,3 +24,12 @@ export async function findMyFavs(token) {
   console.log("this is what we are returning from my favs service", res);
   return res;
 }
+// export async function findMyFavs(token, page) {
+//   console.log("we are in services of finding my favs");
+//   const req = await fetch(
+//     `${BASE_URL}favorites/myfavs?token=${token}&page=${page}`
+//   );
+//   const res = await req.json();
+//   console.log("this is what we are returning from my favs service", res);
+//   return res;
+// }

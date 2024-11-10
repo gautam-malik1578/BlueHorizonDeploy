@@ -4,6 +4,7 @@ const initialState = {
   isDarkMode: true,
   searchViaMap: false,
   showMap: false,
+  StopshowAnnimation: true,
 };
 const settingSlice = createSlice({
   name: "setting",
@@ -11,6 +12,9 @@ const settingSlice = createSlice({
   reducers: {
     darkModeToogle(state, action) {
       state.isDarkMode = !state.isDarkMode;
+    },
+    ToogleShowAnnimation(state, action) {
+      state.StopshowAnnimation = !state.StopshowAnnimation;
     },
     searchViaMapToogle(state, action) {
       if (state.searchViaMap == false) {
@@ -21,12 +25,6 @@ const settingSlice = createSlice({
         state.showMap = false;
         state.searchViaMap = false;
       }
-      // state.searchViaMap = !state.searchViaMap;
-      // console.log(
-      //   "the value of the searchVia map and showMap are ---",
-      //   state.searchViaMap,
-      //   state.showMap
-      // );
     },
     setMapFalse(state, action) {
       state.searchViaMap = false;
@@ -57,6 +55,7 @@ export const {
   searchViaMapToogle,
   showMapToggle,
   setMapFalse,
+  ToogleShowAnnimation,
 } = settingSlice.actions;
 const settingReducer = settingSlice.reducer;
 export default settingReducer;

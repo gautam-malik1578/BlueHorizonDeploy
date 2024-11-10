@@ -14,6 +14,43 @@ export const getAllAttraction = catchAsync(async (req, res, next) => {
   });
 });
 
+export const createMultipleAttractions = catchAsync(async (req, res, next) => {
+  const { cityId } = req.params;
+
+  // Ensure `req.body.attractions` is an array of attraction objects
+  const attractionsData = req.body.attractions.map((attraction) => ({
+    ...attraction,
+    cityId,
+  }));
+
+  // Insert all attractions in a single database operation
+  const attractions = await Attraction.insertMany(attractionsData);
+
+  // Collect attraction names and the first image of each attraction
+  const attractionNames = [];
+  const attractionImages = [];
+  attractions.forEach((attraction) => {
+    attractionNames.push(attraction.attractionName);
+    if (attraction.imgs && attraction.imgs.length > 0) {
+      attractionImages.push(attraction.imgs[0]);
+    }
+  });
+
+  // Update the City document with the attraction names and first images
+  await City.findByIdAndUpdate(cityId, {
+    $addToSet: {
+      todos: { $each: attractionNames },
+      imgs: { $each: attractionImages },
+    },
+  });
+
+  res.status(200).json({
+    status: "success",
+    message: "Attractions successfully created",
+    data: { attractions },
+  });
+});
+
 export const createAttraction = catchAsync(async (req, res, next) => {
   const attraction = await Attraction.create({
     ...req.body,
@@ -33,6 +70,7 @@ export const getAllAtractionsofACity = catchAsync(async (req, res, next) => {
   //     console.log("boi this is what we need to do", attraction.isFav);
   //     await attraction.save();
   //   });
+
   const allAttractionIds = attractions.map((attraction) => attraction.id);
   const isFavs = await Favorite.find({
     user: req.user.id,

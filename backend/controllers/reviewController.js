@@ -1,4 +1,5 @@
 import Review from "../Models/reviewModel.js";
+import Attraction from "../Models/attractionModel.js";
 import User from "../Models/userModel.js";
 import { AppError } from "../utils/Error.js";
 import { catchAsync } from "../utils/catchAsync.js";
@@ -18,6 +19,10 @@ export const createReviewOnAttractionOfCity = catchAsync(
     // const user = await User.findById(req.user.id);
     // review.authorAvatar = user.avatar; //this is temporary
     // await review.save();
+    const attraction = await Attraction.findById(req.params.attractionId);
+    review.attractionName = attraction.attractionName;
+    review.attractionImg = attraction.imgs[0];
+    await review.save({ validateBeforeSave: false });
     res.status(200).json({ status: "success", data: { review } });
   }
 );
@@ -35,10 +40,30 @@ export const getReviewOnCity = catchAsync(async (req, res, next) => {
   });
 });
 export const getReviewByUser = catchAsync(async (req, res, next) => {
-  const reviews = await Review.find({ user: req.user.id });
+  const page = req.query.page * 1 || 1; // Get the page number from query, default to 1 if not provided
+  const limit = 3; // Number of reviews per page
+  const skip = (page - 1) * limit; // Skip the appropriate number of reviews for the current page
+
+  // Query to find reviews, apply pagination (skip and limit)
+  const reviews = await Review.find({ user: req.user.id })
+    .skip(skip)
+    .limit(limit);
+
+  // Count total reviews to calculate total pages
+  const totalReviews = await Review.countDocuments({ user: req.user.id });
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(totalReviews / limit);
+
   res.status(200).json({
     status: "success",
     data: { reviews },
+    pagination: {
+      totalReviews,
+      totalPages,
+      currentPage: page,
+      limit,
+    },
   });
 });
 

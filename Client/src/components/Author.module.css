@@ -1,0 +1,51 @@
+.author {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/* figure {
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+} */
+figure img {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* li a figure {
+  padding: 0;
+  width: 70px;
+  height: 70px;
+} */
+.about {
+  color: black;
+  text-align: center;
+  /* background-color: yellow; */
+  width: 80%;
+  font-size: 16px;
+}
+ol {
+  display: flex;
+  gap: 50px;
+  width: 80%;
+}
+.fig1 {
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.fig2 {
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}

@@ -83,3 +83,16 @@
 .info {
   flex-grow: 1;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.pagination button {
+  padding: 3px 6px;
+  border: none;
+}
+.pagination button:hover {
+  cursor: pointer;
+}

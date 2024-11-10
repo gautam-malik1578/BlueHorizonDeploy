@@ -44,6 +44,14 @@ function Verify() {
         setMessage(data.message || "Success");
         if (isRequestingOtp) {
           handleToggle(); // Auto-toggle to OTP verification if OTP request is successful
+          toast.success(`otp sent !`, {
+            icon: "😁",
+            style: {
+              backgroundColor: "var(--color-green)",
+              color: "white",
+              textTransform: "capitalize",
+            },
+          });
         } else {
           // Dispatch user data to Redux if OTP verification is successful
           dispatch(setToken(data.token));
@@ -63,7 +71,7 @@ function Verify() {
               textTransform: "capitalize",
             },
           });
-          navigate("/travel");
+          navigate("/travel/search");
         }
       } else {
         setMessage(data.message || "An error occurred");

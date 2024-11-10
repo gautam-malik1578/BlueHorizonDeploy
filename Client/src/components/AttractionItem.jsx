@@ -5,7 +5,11 @@ import { useLikes } from "../hooks/useLikes";
 import { useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { useFavs } from "../hooks/useFavs";
+import { useDispatch } from "react-redux";
+import { cityClicked } from "../slices/curCitySlice";
+import { useNavigate } from "react-router-dom";
 function AttractionItem({ type = "like", attraction }) {
+  const navigator = useNavigate();
   const queryClient = useQueryClient();
   const {
     mutate: toggleLike,
@@ -42,6 +46,18 @@ function AttractionItem({ type = "like", attraction }) {
       },
     });
   }
+  const dispatch = useDispatch();
+  function handleViewAttraction(cityId) {
+    dispatch(
+      cityClicked({
+        cityId: cityId,
+        name: "",
+        lat: "",
+        lng: "",
+      })
+    );
+    navigator(`/travel/citydetail/${cityId}`);
+  }
   const words = attraction?.description?.split(" ");
 
   // Get the first 35 words and join them back with a space
@@ -71,24 +87,33 @@ function AttractionItem({ type = "like", attraction }) {
         <h3>{attraction.cityName}</h3>
         {/* <p className={styles.description}>{attraction.description}</p> */}
         <p className={styles.description}>{shortDescription}</p>
-        {type === "like" && (
+        <div className={styles.btns}>
+          {type === "like" && (
+            <button
+              onClick={() => {
+                handleLikeRemove(attraction._id);
+              }}
+            >
+              remove
+            </button>
+          )}
+          {type === "fav" && (
+            <button
+              onClick={() => {
+                handleFavRemove(attraction._id);
+              }}
+            >
+              remove
+            </button>
+          )}
           <button
             onClick={() => {
-              handleLikeRemove(attraction._id);
+              handleViewAttraction(attraction.cityId);
             }}
           >
-            remove
+            view
           </button>
-        )}
-        {type === "fav" && (
-          <button
-            onClick={() => {
-              handleFavRemove(attraction._id);
-            }}
-          >
-            remove
-          </button>
-        )}
+        </div>
       </div>
     </div>
   );

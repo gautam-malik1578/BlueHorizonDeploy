@@ -4,7 +4,7 @@ const favSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.ObjectId,
     ref: "User",
-    reqired: true,
+    required: true,
   },
   attractionIds: {
     type: [{ type: mongoose.Schema.ObjectId, ref: "Attraction" }],

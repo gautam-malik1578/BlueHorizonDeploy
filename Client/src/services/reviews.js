@@ -98,12 +98,24 @@ export const updateAreview = async function (reviewId, content, token) {
   console.log("this is what i got from deleteing  the review ", res);
   return res;
 };
-export async function findMyReviews(token) {
-  console.log(" we are in services of finding my reviews ");
-  const req = await fetch(`${BASE_URL}reviews/myreviews?token=${token}`);
+// export async function findMyReviews(token) {
+//   console.log(" we are in services of finding my reviews ");
+//   const req = await fetch(`${BASE_URL}reviews/myreviews?token=${token}`);
+//   const res = await req.json();
+//   console.log(
+//     "this is what we are returning from find my reviews  services",
+//     res
+//   );
+//   return res;
+// }
+export async function findMyReviews(token, page) {
+  console.log("we are in services of finding my reviews");
+  const req = await fetch(
+    `${BASE_URL}reviews/myreviews?token=${token}&page=${page}`
+  );
   const res = await req.json();
   console.log(
-    "this is what we are returning from find my reviews  services",
+    "this is what we are returning from find my reviews services",
     res
   );
   return res;

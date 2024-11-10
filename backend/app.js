@@ -23,8 +23,8 @@ import { GlobalErrorHandler } from "./utils/GlobalErrorHandler.js";
 //////////connecting to the db//////////////////////////////////////
 mongoose
   .connect(
-    // "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.2",
-    "mongodb://127.0.0.1:27017/blueHorizon",
+    `mongodb+srv://gamapy87:${process.env.DBPassword}@bluehorizon1.jhwa4.mongodb.net/?retryWrites=true&w=majority&appName=BlueHorizon1`,
+    // "mongodb://127.0.0.1:27017/blueHorizon",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true, //caferful about  to be deprecateed

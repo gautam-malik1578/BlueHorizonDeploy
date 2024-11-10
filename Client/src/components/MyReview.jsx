@@ -4,19 +4,36 @@ import Tags from "./Tags";
 import UpdateDashboardReview from "./UpdateDashboardReview";
 function MyReview({ review, handleDeleteReview, handleViewAttraction }) {
   const [showForm, setShowForm] = useState(false);
+  const ImgUrl = review?.attractionImg || review?.authorAvatarUrl;
+  const attractionName = review?.attractionName || "myReview";
   return (
     <div className={styles.review} key={review._id}>
       <figure>
-        <img src={review.authorAvatarUrl} alt="userpic" />
+        {/* <img src={review.authorAvatarUrl} alt="userpic" /> */}
+        <img src={ImgUrl} alt="userpic" />
       </figure>
       <div className={styles.info}>
         <div className={styles.meta}>
-          <span>2hrs ago</span>
+          {/* <span>2hrs ago</span> */}
+          {attractionName.length > 0 && attractionName != "myReview" && (
+            <span>{attractionName}</span>
+          )}
+          <span>{review?.createdAt?.split("T")[0]}</span>
           {review.isUpdated && <Tags type="green">updated</Tags>}
         </div>
         <p className={styles.content}>{review.content}</p>
         <div className={styles.btns}>
-          <button onClick={handleViewAttraction}>view</button>
+          <button
+            onClick={() =>
+              handleViewAttraction(
+                review.city,
+                review.attraction,
+                attractionName
+              )
+            }
+          >
+            view
+          </button>
           <button
             style={showForm ? { backgroundColor: "var(--color-red)" } : {}}
             onClick={() => {

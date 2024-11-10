@@ -25,6 +25,14 @@ const reviewSchema = new mongoose.Schema({
     ref: "Attraction",
     index: true,
   },
+  attractionName: {
+    type: String,
+    default: "",
+  },
+  attractionImg: {
+    type: String,
+    default: "",
+  },
   author: {
     type: String,
   },

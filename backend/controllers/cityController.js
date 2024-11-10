@@ -1,34 +1,45 @@
 import City from "../Models/cityModel.js";
 import { AppError } from "../utils/Error.js";
 import { catchAsync } from "../utils/catchAsync.js";
+
 export const getCities = catchAsync(async (req, res, next) => {
   const excludedFields = ["sort", "page", "limit", "fields"];
-  //
   const queryObj = { ...req.query };
+
+  // Delete excluded fields from query
   excludedFields.forEach((el) => delete queryObj[el]);
-  console.log("the a--------------------->>>>>>>>>>>>>>>>>>>>>>..😎", queryObj);
-  //
-  let queryString = JSON.stringify(queryObj);
-  queryString = queryString.replace(
-    /\b(gte|gt|lte|lt)\b/g,
-    (match) => `$${match}`
-  );
-  console.log("the queryString is this :>>>>>>>>>>>>>>>>>>", queryString);
-  let query = City.find(JSON.parse(queryString));
+
+  // Make all fields (except excluded) case-insensitive
+  for (let key in queryObj) {
+    if (typeof queryObj[key] === "string") {
+      queryObj[key] = { $regex: new RegExp(queryObj[key], "i") }; // here we made the case insentive search expression
+    }
+  }
+
+  // Handle operators like gte, lte, etc.
+  for (let key in queryObj) {
+    if (/\b(gte|gt|lte|lt)\b/.test(key)) {
+      const operator = key.match(/\b(gte|gt|lte|lt)\b/)[0];
+      queryObj[key] = { [`$${operator}`]: queryObj[key] };
+    }
+  }
+
+  let query = City.find(queryObj);
+
+  // Field selection
   if (req.query.fields) {
-    const fields = req.query?.fields?.split(",").join(" ");
-    query = query.select("-__v");
+    const fields = req.query.fields.split(",").join(" ");
     query = query.select(fields);
-    console.log("yee boi we reached here ,👍👍👍👍👍👍👍👍 111111");
   } else {
     query = query.select("-__v");
-    console.log("yee boi we reached here ,👍👍👍👍👍👍👍👍2222222");
   }
-  //pagination//
+
+  // Pagination setup
   const page = req.query.page * 1 || 1;
-  const limit = req.query.limit * 1 || 10;
+  const limit = req.query.limit * 1 || 5; //insted of 10 i made the size to be 5
   const skip = (page - 1) * limit;
   query = query.skip(skip).limit(limit);
+
   if (req.query.page) {
     const numCities = await City.countDocuments();
     if (skip > numCities) {
@@ -36,16 +47,21 @@ export const getCities = catchAsync(async (req, res, next) => {
     }
   }
 
-  //finally executing the query
+  // Execute the query
   const cities = await query;
-  //   console.log("the cities that we found are >>>>>>>>", cities);
-  // if (cities.length === 0) {
-  //   return next(new AppError("we don't have any city info at the moment", 404));
-  // }
   res.status(200).json({
     status: "success",
     length: cities.length,
     data: { cities },
+  });
+});
+
+export const setCityData = catchAsync(async (req, res, next) => {
+  const data = [...req.body.data];
+  await City.insertMany(data);
+  res.status(200).json({
+    status: "success",
+    message: "we made the data to the database",
   });
 });
 export const createCity = catchAsync(async (req, res, next) => {
