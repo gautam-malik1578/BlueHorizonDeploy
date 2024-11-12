@@ -21,7 +21,7 @@ favSchema.statics.checkIsFav = async function (userId, favId) {
       $in: favId,
     },
   });
-  console.log("the results from 1999919919919 is ", result);
+  // console.log("the results from 1999919919919 is ", result);
   if (result.length > 0) {
     return true;
   } else {

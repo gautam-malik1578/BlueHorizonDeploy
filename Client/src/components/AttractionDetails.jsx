@@ -13,7 +13,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 function AttractionDetails({ attraction, setShowFeature, showfeature }) {
   const navigate = useNavigate();
-  console.log("this is the value of showfeature💔💔💔💔💔💔💔💔", showfeature);
+  // console.log("this is the value of showfeature💔💔💔💔💔💔💔💔", showfeature);
   const [isExpand, setIsExpand] = useState(true);
   const queryClient = useQueryClient();
   const {
@@ -27,22 +27,22 @@ function AttractionDetails({ attraction, setShowFeature, showfeature }) {
     isLoading: favLoading,
   } = useFavs();
   function handleClickLike() {
-    console.log("the button was cliked to run like");
+    // console.log("the button was cliked to run like");
     toggleLike(attraction._id, {
       onSuccess: () => {
-        console.log("the on success handler ran of the likes:))))))))))");
+        // console.log("the on success handler ran of the likes:))))))))))");
         queryClient.refetchQueries(["attractionsOnACity", attraction.cityId]);
         queryClient.invalidateQueries(["findMyLikes"]);
       },
     });
   }
   function handleFavToggle(type) {
-    console.log("we are launching the toggle fav b with type", type);
+    // console.log("we are launching the toggle fav b with type", type);
     toggleFav(
       { type, attractionId: attraction._id },
       {
         onSuccess: () => {
-          console.log("we are in the success handler in fav");
+          // console.log("we are in the success handler in fav");
           queryClient.refetchQueries(["attractionsOnACity", attraction.cityId]);
           queryClient.invalidateQueries(["findMyfavs"]);
           toast.success(

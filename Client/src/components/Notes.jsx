@@ -12,12 +12,12 @@ function Notes({ attractionId }) {
   const { mutate: updateNote } = useUpdatenotes(attractionId);
   let action = "";
   const { handleSubmit, register, reset } = useForm();
-  console.log("the data in the note  component is ", data);
+  // console.log("the data in the note  component is ", data);
   function onSubmitNote(formData) {
-    console.log(
-      "all set to launch create not query with action set to ==",
-      action
-    );
+    // console.log(
+    //   "all set to launch create not query with action set to ==",
+    //   action
+    // );
     const content = formData.content;
     if (data.length === 0) {
       createNote(content);

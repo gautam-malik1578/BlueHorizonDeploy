@@ -34,7 +34,7 @@ mongoose
   )
   .then((res) => {
     // console.log(res); //full of data//
-    console.log("boi connected to the db---->>>> 😎😎😎");
+    // console.log("boi connected to the db---->>>> 😎😎😎");
   })
   .catch((err) => {
     console.log("there was an error connectiong to db 💥💥💥💥", err);

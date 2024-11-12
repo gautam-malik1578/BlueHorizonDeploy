@@ -14,10 +14,10 @@ function UpdateReplyForm({ replyTo, reviewId, setShowUpdateReplyForm, reply }) {
   } = useUpdateReply(reviewId);
   function handleOnSubmit(data) {
     const content = { ...data };
-    console.log(
-      "this is what i have i reply form on submit for update",
-      content
-    );
+    // console.log(
+    //   "this is what i have i reply form on submit for update",
+    //   content
+    // );
     updateReply(
       { replyId: reply._id, content },
       {
@@ -29,7 +29,7 @@ function UpdateReplyForm({ replyTo, reviewId, setShowUpdateReplyForm, reply }) {
     );
   }
   function handleSubmitError(err) {
-    console.log("we are in the error of submiting the error on ", err);
+    // console.log("we are in the error of submiting the error on ", err);
   }
 
   return (

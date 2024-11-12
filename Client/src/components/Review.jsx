@@ -19,7 +19,7 @@ function Review({
   const [showReplies, setShowReplies] = useState(false);
   const [showReplyForm, setShowReplyForm] = useState(false);
   const currentUserId = useSelector((state) => state.user.userId);
-  console.log("the error of deleting can be =====>", error);
+  // console.log("the error of deleting can be =====>", error);
   function handleDelete() {
     mutate(review._id);
   }

@@ -10,7 +10,7 @@ function ResetPasswordForm({ setShowForm }) {
     error: resetingError,
   } = useResetPassword();
   function handleOnSubmit(data) {
-    console.log("this is what we are sending to resetpassword ", data);
+    // console.log("this is what we are sending to resetpassword ", data);
     resetPassword(data, {
       onSuccess: () => {
         reset();

@@ -86,7 +86,7 @@ function Settings() {
             name=""
             id="Annimation"
             onChange={(e) => {
-              console.log("the value of e is", e.target.value);
+              // console.log("the value of e is", e.target.value);
               dispatch(ToogleShowAnnimation());
               let message = "the annimation will be shown regularly";
               if (e.target.value == "true") {

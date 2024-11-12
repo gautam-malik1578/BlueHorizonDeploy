@@ -11,17 +11,17 @@ export const useUpdateReviews = function (attractionId, setShowUpdateForm) {
   const { data, mutate, isLoading, error } = useMutation({
     mutationKey: ["deleteReview"],
     mutationFn: async ({ id, content }) => {
-      console.log(
-        "the value of the content in the mutaton fun is ----<<<>>>.",
-        content
-      );
+      // console.log(
+      //   "the value of the content in the mutaton fun is ----<<<>>>.",
+      //   content
+      // );
       const res = await updateAreview(id, content, token);
       return res;
     },
     onSuccess: () => {
-      console.log(
-        "🎉🎉🎉🎉🎉🎉🎉 updated the  the review now ro retecht the query:)))🎉🎉💥💥"
-      );
+      // console.log(
+      //   "🎉🎉🎉🎉🎉🎉🎉 updated the  the review now ro retecht the query:)))🎉🎉💥💥"
+      // );
       queryClient.refetchQueries(["findAllReviews", attractionId]);
       queryClient.invalidateQueries(["findMyReviews"]);
       toast.success("review updated sucessfully", {

@@ -6,7 +6,7 @@ import { catchAsync } from "../utils/catchAsync.js";
 
 export const createReviewOnAttractionOfCity = catchAsync(
   async (req, res, next) => {
-    console.log("boi we did reach the req>>>>>>>>>>>>>>>>>>");
+    // console.log("boi we did reach the req>>>>>>>>>>>>>>>>>>");
     const review = await Review.create({
       ...req.body,
       user: req.user.id,
@@ -91,7 +91,7 @@ export const deleteAReview = catchAsync(async (req, res, next) => {
     _id: req.params.reviewId,
   });
   if (review === null) {
-    console.log("the review when deleting is💥💥💥💥💥💥💥💥💥💥 ", review);
+    // console.log("the review when deleting is💥💥💥💥💥💥💥💥💥💥 ", review);
     return next(new AppError("can't deleted this review", 400));
   }
   res.status(200).json({
@@ -115,7 +115,7 @@ export const updateAReview = catchAsync(async (req, res, next) => {
     { new: true }
   );
   if (review === null) {
-    console.log("the review when deleting is ", review);
+    // console.log("the review when deleting is ", review);
     return next(new AppError("can't update others review", 400));
   }
   review.isUpdated = true;

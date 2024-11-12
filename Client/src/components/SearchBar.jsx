@@ -14,11 +14,11 @@ function SearchBar({ setCityData }) {
   const [value, setValue] = useState(searchValue);
   const [type, setType] = useState(searchType);
   const dispatch = useDispatch();
-  console.log(
-    "the value of searchTYpe and search value is ++++++++++,",
-    searchType,
-    searchValue
-  );
+  // console.log(
+  //   "the value of searchTYpe and search value is ++++++++++,",
+  //   searchType,
+  //   searchValue
+  // );
   useEffect(() => {
     dispatch(search({ searchType: "country", searchValue: "" }));
     dispatch(setMapFalse());

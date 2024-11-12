@@ -79,7 +79,7 @@ function Verify() {
       }
     } catch (error) {
       setMessage("Network error: Unable to complete request");
-      console.log(error);
+      // console.log(error);
     } finally {
       setLoading(false); // Stop loading
     }

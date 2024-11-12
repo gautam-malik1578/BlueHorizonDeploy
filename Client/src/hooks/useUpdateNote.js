@@ -10,10 +10,10 @@ export const useUpdatenotes = function (attractionId) {
   const { data, mutate, isLoading, error } = useMutation({
     mutationKey: ["deleteNote"],
     mutationFn: async ({ noteId, content, action }) => {
-      console.log(
-        "the value of the content in the mutaton fun is on update note ----<<<>>>.",
-        content
-      );
+      // console.log(
+      //   "the value of the content in the mutaton fun is on update note ----<<<>>>.",
+      //   content
+      // );
       const res = await updateANote(noteId, content, action, token);
       return res;
     },

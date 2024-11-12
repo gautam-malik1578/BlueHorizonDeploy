@@ -15,7 +15,7 @@ function ReplyForm({ replyTo, reviewId, setShowReplyForm }) {
   let action = "";
   function handleOnSubmit(data) {
     const content = { ...data, username, replyTo };
-    console.log("this is what i have i reply form on submit", content);
+    // console.log("this is what i have i reply form on submit", content);
     if (action === "create") {
       createReply(content, {
         onSuccess: () => {
@@ -29,7 +29,7 @@ function ReplyForm({ replyTo, reviewId, setShowReplyForm }) {
     }
   }
   function handleSubmitError(err) {
-    console.log("we are in the error of submiting the error on ", err);
+    // console.log("we are in the error of submiting the error on ", err);
   }
 
   const { register, reset, handleSubmit } = useForm();

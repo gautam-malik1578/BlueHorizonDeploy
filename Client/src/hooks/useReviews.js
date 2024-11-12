@@ -18,6 +18,6 @@ export function useReviews(attractionId) {
     // enabled: false,
   });
 
-  console.log("the res is in the useQuery of userREVIEWS-->---->>>", data);
+  // console.log("the res is in the useQuery of userREVIEWS-->---->>>", data);
   return { refetch, data, isLoading };
 }

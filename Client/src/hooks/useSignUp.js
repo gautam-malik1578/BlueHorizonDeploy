@@ -10,7 +10,7 @@ export function useSignUp() {
     mutationKey: ["signUp"],
     mutationFn: async (data) => await signup(data),
     onSuccess: (data) => {
-      console.log("boi we are in success of sign mutate:)))", data);
+      // console.log("boi we are in success of sign mutate:)))", data);
       // dispatch(setToken(data.token));
       // dispatch(toggleLogIn());
       // dispatch(
@@ -30,7 +30,7 @@ export function useSignUp() {
       });
     },
     onError: (err) => {
-      console.log("we are in usesignup on error ,", err);
+      // console.log("we are in usesignup on error ,", err);
       toast.error(err.message, {
         position: "top-center",
         duration: 6000,

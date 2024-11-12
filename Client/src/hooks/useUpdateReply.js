@@ -11,7 +11,7 @@ export function useUpdateReply(reviewId) {
     mutationFn: async (data) =>
       await updateReplyOnReview(reviewId, data.replyId, data.content, token),
     onSuccess: () => {
-      console.log("boi we are in sucess of deleteing a review a reply :;)))");
+      // console.log("boi we are in sucess of deleteing a review a reply :;)))");
       queryClient.refetchQueries(["findReplies", reviewId]);
       toast.success("reply updated sucessfully", {
         icon: "👍",

@@ -15,7 +15,7 @@ likesSchema.statics.addToLike = async function (id, attractionId) {
     user: id,
     attractionsIds: attractionId,
   });
-  console.log("💥💥💥💥💥💥💥💥💥💥💥💥1", exisitdoc);
+  // console.log("💥💥💥💥💥💥💥💥💥💥💥💥1", exisitdoc);
   if (exisitdoc) {
     const doc = await this.findOneAndUpdate(
       { user: id },
@@ -24,10 +24,10 @@ likesSchema.statics.addToLike = async function (id, attractionId) {
         new: true,
       }
     );
-    console.log(
-      "removed the like on the attraction--->>> returen false😢😢😢",
-      doc
-    );
+    // console.log(
+    //   "removed the like on the attraction--->>> returen false😢😢😢",
+    //   doc
+    // );
     return false;
   } else {
     const doc = await this.findOneAndUpdate(
@@ -35,10 +35,10 @@ likesSchema.statics.addToLike = async function (id, attractionId) {
       { $addToSet: { attractionsIds: attractionId } },
       { new: true, upsert: true }
     );
-    console.log(
-      "added the  like on the attraction ----->>>> returend true 😁😁😁",
-      doc
-    );
+    // console.log(
+    //   "added the  like on the attraction ----->>>> returend true 😁😁😁",
+    //   doc
+    // );
     return true;
   }
 };

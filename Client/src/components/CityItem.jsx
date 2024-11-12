@@ -22,11 +22,11 @@ function CityItem({ city }) {
         datay === city._id ? styles.active : ""
       }`}
       onClick={() => {
-        console.log(
-          "we clicked a city with name and id",
-          city.cityName,
-          city._id
-        );
+        // console.log(
+        //   "we clicked a city with name and id",
+        //   city.cityName,
+        //   city._id
+        // );
         dispatch(
           cityClicked({
             cityId: city._id,

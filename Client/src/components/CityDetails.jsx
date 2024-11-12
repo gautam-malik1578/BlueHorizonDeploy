@@ -19,10 +19,10 @@ function CityDetails() {
     queryKey: ["attractionsOnACity", selectedCityId],
     queryFn: () => getAllatractionsOnACity(selectedCityId, token),
     onSuccess: (data) => {
-      console.log("on successs did run bro  :))))))))))))", data);
+      // console.log("on successs did run bro  :))))))))))))", data);
     },
   });
-  console.log(data, selectedCityId);
+  // console.log(data, selectedCityId);
   if (!data) {
     // console.log(
     //   "were are loading the data for now ----------------------------"

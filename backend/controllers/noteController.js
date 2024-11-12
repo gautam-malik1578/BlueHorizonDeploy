@@ -79,7 +79,7 @@ export const updateAnote = catchAsync(async (req, res, next) => {
     },
     { new: true }
   );
-  console.log("the is the note we made ", note);
+  // console.log("the is the note we made ", note);
   res.status(200).json({
     status: "success",
     message: "note updated successfully",

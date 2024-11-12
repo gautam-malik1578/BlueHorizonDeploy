@@ -135,7 +135,7 @@ function HandleClickMap() {
   const map = useMap();
   useMapEvents({
     click: (e) => {
-      console.log("Map clicked at", e);
+      // console.log("Map clicked at", e);
     },
     dragend: () => {
       if (!isSearchViaMap) return;

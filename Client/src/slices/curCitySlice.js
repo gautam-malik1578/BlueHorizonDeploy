@@ -14,7 +14,7 @@ const curCitySlice = createSlice({
   initialState,
   reducers: {
     cityClicked(state, action) {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.cityId = action.payload.cityId;
       state.name = action.payload.name;
       state.lat = action.payload.lat;

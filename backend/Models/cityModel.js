@@ -40,7 +40,7 @@ citySchema.statics.addAttractionToCity = async function (
   const city = await this.findByIdAndUpdate(cityId, {
     $addToSet: { todos: attractionName },
   });
-  console.log("☁️☁️☁️☁️", city, cityId);
+  // console.log("☁️☁️☁️☁️", city, cityId);
 };
 citySchema.index({ location: "2dsphere" });
 const City = mongoose.model("City", citySchema);

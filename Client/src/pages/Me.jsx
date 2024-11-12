@@ -16,7 +16,7 @@ function Me() {
   const [showForm, setShowForm] = useState(false);
   const [showAvatarOptions, setShowAvatarOptions] = useState(false);
   const { data, isLoading, error } = useFindMe();
-  console.log(data);
+  // console.log(data);
   function handleLoggingOut() {
     toast.success("logged out", {
       icon: "🙋‍♂️",

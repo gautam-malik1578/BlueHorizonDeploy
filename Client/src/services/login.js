@@ -1,6 +1,6 @@
 const BASE_URL = "http://127.0.0.1:8000/";
 export async function login(data) {
-  console.log("reached in login fun");
+  // console.log("reached in login fun");
   const req = await fetch(`${BASE_URL}user/login`, {
     method: "POST",
     headers: {
@@ -16,10 +16,10 @@ export async function login(data) {
   if (res.status === "fail") {
     throw new Error(res.message);
   }
-  console.log(
-    "boi this is what login  function 😎😎😎😎😎😎",
-    // id,
-    res
-  );
+  // console.log(
+  //   "boi this is what login  function 😎😎😎😎😎😎",
+  //   // id,
+  //   res
+  // );
   return res;
 }

@@ -31,7 +31,7 @@ function Reply({ reply, reviewId }) {
           <button
             style={showReplyForm ? { backgroundColor: "var(--color-red)" } : {}}
             onClick={() => {
-              console.log("boi you clicked on to create a reply :()");
+              // console.log("boi you clicked on to create a reply :()");
               setShowReplyForm((showReplyForm) => !showReplyForm);
               setShowUpdateReplyForm(false);
             }}

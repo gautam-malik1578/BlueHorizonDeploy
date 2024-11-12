@@ -80,11 +80,11 @@ export const deleteAReply = catchAsync(async (req, res, next) => {
     userId: req.user.id,
   });
   if (!reply) {
-    console.log(
-      "immmmmmmmmmmmmmmmmmmmmmmmmmmppppppppppppppppppppppppppp))))))))))))))))",
-      reply,
-      req.user.id
-    );
+    // console.log(
+    //   "immmmmmmmmmmmmmmmmmmmmmmmmmmppppppppppppppppppppppppppp))))))))))))))))",
+    //   reply,
+    //   req.user.id
+    // );
     return next(
       new AppError("only the user who made the reply can delete it", 400)
     );
@@ -110,7 +110,7 @@ export const updateAReply = catchAsync(async (req, res, next) => {
     { new: true }
   );
   if (!reply) {
-    console.log(reply);
+    // console.log(reply);
     return next(new AppError("you can't update this review", 200));
   }
   res.status(200).json({

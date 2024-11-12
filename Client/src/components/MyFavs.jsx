@@ -8,9 +8,9 @@ function MyFavs() {
   if (isLoading) {
     return <Loader />;
   }
-  console.log(data?.data?.favAttractions[0]?.attractionIds);
+  // console.log(data?.data?.favAttractions[0]?.attractionIds);
   const len = data?.data?.favAttractions[0]?.attractionIds.length;
-  console.log(len);
+  // console.log(len);
   // if (len === 0) {
   //   return <NotFound text="No Favs Yet :(" />;
   // }

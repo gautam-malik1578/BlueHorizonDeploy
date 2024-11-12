@@ -4,12 +4,12 @@ export const getAllReviewsOnAttraction = async function (
   attractionId,
   token
 ) {
-  console.log(
-    "we a seacring for reviews noe+++++++++++++",
-    cityId,
-    attractionId,
-    token
-  );
+  // console.log(
+  //   "we a seacring for reviews noe+++++++++++++",
+  //   cityId,
+  //   attractionId,
+  //   token
+  // );
   if (!cityId || !attractionId || !token) {
     return console.log("we retured  eary to find all review on attraction ");
   }
@@ -19,10 +19,10 @@ export const getAllReviewsOnAttraction = async function (
     `${BASE_URL}reviews/city/${cityId}/attraction/${attractionId}?token=${token}`
   );
   const data = await res.json();
-  console.log(
-    "this is what we got from the res data of asking all reviews ",
-    data?.data?.reviews
-  );
+  // console.log(
+  //   "this is what we got from the res data of asking all reviews ",
+  //   data?.data?.reviews
+  // );
   return data?.data?.reviews;
 };
 export const createAReviewOnAttraction = async function (
@@ -31,12 +31,12 @@ export const createAReviewOnAttraction = async function (
   content,
   token
 ) {
-  console.log(
-    "were are in creating review service:))1",
-    cityId,
-    attractionId,
-    content
-  );
+  // console.log(
+  //   "were are in creating review service:))1",
+  //   cityId,
+  //   attractionId,
+  //   content
+  // );
   //   return [];
   const req = await fetch(
     // `${BASE_URL}reviews/city/65d23741ee7e47c057b4cdf6/attraction/65d23a82ee7e47c057b4ce12?token=${token}`,
@@ -50,16 +50,16 @@ export const createAReviewOnAttraction = async function (
     }
   );
   const res = await req.json();
-  console.log("this is what we are returnig from create review services", res);
+  // console.log("this is what we are returnig from create review services", res);
   return res;
 };
 export const deleteAreview = async function (reviewId, token) {
-  console.log("were are in servives of deleted a review");
+  // console.log("were are in servives of deleted a review");
   if (!reviewId) {
-    console.log(
-      "the reviewiid was not found in the deleting reveiws service",
-      reviewId
-    );
+    // console.log(
+    //   "the reviewiid was not found in the deleting reveiws service",
+    //   reviewId
+    // );
     throw new Error("no review id was provided");
   }
   const req = await fetch(`${BASE_URL}reviews/${reviewId}?token=${token}`, {
@@ -69,19 +69,19 @@ export const deleteAreview = async function (reviewId, token) {
   if (res.status == "fail") {
     throw new Error(res.message);
   }
-  console.log("this is what i got from deleteing  the review ", res);
+  // console.log("this is what i got from deleteing  the review ", res);
   return res;
 };
 
 export const updateAreview = async function (reviewId, content, token) {
-  console.log("were are in servives of deleted a review");
+  // console.log("were are in servives of deleted a review");
   if (!reviewId || !token || !content) {
-    console.log(
-      "the reviewiid was not found in the deleting reveiws service",
-      reviewId,
-      content,
-      token
-    );
+    // console.log(
+    //   "the reviewiid was not found in the deleting reveiws service",
+    //   reviewId,
+    //   content,
+    //   token
+    // );
     throw new Error("no review id was provided");
   }
   const req = await fetch(`${BASE_URL}reviews/${reviewId}?token=${token}`, {
@@ -95,7 +95,7 @@ export const updateAreview = async function (reviewId, content, token) {
   if (res.status == "fail") {
     throw new Error(res.message);
   }
-  console.log("this is what i got from deleteing  the review ", res);
+  // console.log("this is what i got from deleteing  the review ", res);
   return res;
 };
 // export async function findMyReviews(token) {
@@ -109,14 +109,14 @@ export const updateAreview = async function (reviewId, content, token) {
 //   return res;
 // }
 export async function findMyReviews(token, page) {
-  console.log("we are in services of finding my reviews");
+  // console.log("we are in services of finding my reviews");
   const req = await fetch(
     `${BASE_URL}reviews/myreviews?token=${token}&page=${page}`
   );
   const res = await req.json();
-  console.log(
-    "this is what we are returning from find my reviews services",
-    res
-  );
+  // console.log(
+  //   "this is what we are returning from find my reviews services",
+  //   res
+  // );
   return res;
 }

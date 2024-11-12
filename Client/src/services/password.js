@@ -9,9 +9,9 @@ export async function resetPassword(content, token) {
     },
   });
   const res = await req.json();
-  console.log(
-    "this is what we are returning from the services of reseting password me",
-    res
-  );
+  // console.log(
+  //   "this is what we are returning from the services of reseting password me",
+  //   res
+  // );
   return res;
 }

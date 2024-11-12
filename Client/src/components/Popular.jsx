@@ -17,7 +17,7 @@ function Popular() {
   const [showChart, setShowChart] = useState(false);
   const dispatch = useDispatch();
   const navigator = useNavigate();
-  console.log("the selected attraction is =-", selectedAttraction);
+  // console.log("the selected attraction is =-", selectedAttraction);
   const { isLoading, data: popData, error } = useFindPopular();
   function handleClickButton(id) {
     setSelectedAttraction(id);
@@ -25,7 +25,7 @@ function Popular() {
   if (isLoading) {
     return <Loader />;
   }
-  console.log(popData);
+  // console.log(popData);
   function handleViewAttraction(cityId) {
     // toast.success("working on feature", {
     //   icon: "🔨",

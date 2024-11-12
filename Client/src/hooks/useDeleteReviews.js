@@ -15,9 +15,9 @@ export const useDeleteReviews = function (attractionId) {
       return res;
     },
     onSuccess: () => {
-      console.log(
-        "🎉🎉🎉🎉🎉🎉🎉 deleted the review now ro retecht the query:)))🎉🎉💥💥"
-      );
+      // console.log(
+      //   "🎉🎉🎉🎉🎉🎉🎉 deleted the review now ro retecht the query:)))🎉🎉💥💥"
+      // );
       queryClient.refetchQueries(["findAllReviews", attractionId]);
       toast.success("review deleted sucessfully", {
         icon: "😎",

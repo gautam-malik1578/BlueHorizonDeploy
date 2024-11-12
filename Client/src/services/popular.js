@@ -5,9 +5,9 @@ export async function findPopularAttractions(max, token) {
     `${BASE_URL}attractions/popular/${max}?token=${token}`
   );
   const res = await req.json();
-  console.log(
-    "this is what we are returning from find popular  services",
-    res.data.popularAttractions
-  );
+  // console.log(
+  //   "this is what we are returning from find popular  services",
+  //   res.data.popularAttractions
+  // );
   return res.data.popularAttractions;
 }

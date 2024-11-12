@@ -1,6 +1,6 @@
 const BASE_URL = "http://127.0.0.1:8000/";
 export async function signup(dataObj) {
-  console.log("we are in the sign up services with data as === ", dataObj);
+  // console.log("we are in the sign up services with data as === ", dataObj);
   if (dataObj.length === 0) {
     throw new Error("the data obj was empty");
   }
@@ -16,6 +16,6 @@ export async function signup(dataObj) {
     // console.log("we are in res.status===fail block");
     throw new Error(res.message);
   }
-  console.log("this is waht we are returning from the signup services", res);
+  // console.log("this is waht we are returning from the signup services", res);
   return res;
 }

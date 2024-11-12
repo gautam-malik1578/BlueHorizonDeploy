@@ -7,13 +7,13 @@ export function useMyLocation() {
     (coords) => {
       myLat = coords.coords.latitude;
       myLng = coords.coords.longitude;
-      console.log("i got your coords", myLat, myLng);
+      // console.log("i got your coords", myLat, myLng);
     },
     (err) => {
       console.log(err);
       errCode = err.code;
       msg = err.message;
-      console.log(errCode, msg);
+      // console.log(errCode, msg);
     }
   );
   return { myLat, myLng, errCode, msg };

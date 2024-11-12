@@ -13,10 +13,10 @@ function SignUp() {
     watch,
   } = useForm();
   function handleOnSubmit(data) {
-    console.log(
-      "the data we got from the submission of the data is ---->>>>>>",
-      data
-    );
+    // console.log(
+    //   "the data we got from the submission of the data is ---->>>>>>",
+    //   data
+    // );
     mutate(data, {
       onSuccess: () => {
         reset();
@@ -25,10 +25,10 @@ function SignUp() {
     });
   }
   function handleOnError(err) {
-    console.log(
-      "we are at on error handelers so this is the boi---->>>>>>>",
-      err
-    );
+    // console.log(
+    //   "we are at on error handelers so this is the boi---->>>>>>>",
+    //   err
+    // );
   }
   return (
     <div className={styles.signup}>

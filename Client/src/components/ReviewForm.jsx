@@ -7,15 +7,15 @@ function ReviewForm({ attractionId, setShowForm, attractionName }) {
   const { register, handleSubmit } = useForm();
   const { mutate } = useMakeReview(attractionId, setShowForm);
   const loggedInUserName = useSelector((state) => state.user.username);
-  console.log(
-    ")))))))))))))))))))))))))))))))))))))))))))))))))",
-    attractionName
-  );
+  // console.log(
+  //   ")))))))))))))))))))))))))))))))))))))))))))))))))",
+  //   attractionName
+  // );
   function onSubmitForm(data) {
-    console.log(
-      "this is form th ei=onSubmitform and the data is ())::::)))",
-      data
-    );
+    // console.log(
+    //   "this is form th ei=onSubmitform and the data is ())::::)))",
+    //   data
+    // );
     const content = data.content;
     mutate(content, {
       onSuccess: () => {

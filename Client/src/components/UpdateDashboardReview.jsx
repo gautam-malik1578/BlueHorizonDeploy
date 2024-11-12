@@ -15,7 +15,7 @@ function UpdateDashboardReview({
   const queryClient = useQueryClient();
   const { register, handleSubmit, reset } = useForm();
   function handleOnSubmit(data) {
-    console.log("we reached on handle submit with value", data);
+    // console.log("we reached on handle submit with value", data);
     const content = data.content;
     const id = reviewId;
     mutate(

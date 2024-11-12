@@ -3,7 +3,7 @@ import styles from "./UpdateReviewForm.module.css";
 import { useUpdateReviews } from "../hooks/useUpdateReview";
 import { useSelector } from "react-redux";
 function UpdateReviewForm({ wannbeUpdate, setShowForm, setShowUpdateForm }) {
-  console.log("the wanna be obj is ---", wannbeUpdate);
+  // console.log("the wanna be obj is ---", wannbeUpdate);
   const username = useSelector((store) => store.user.username);
   const { id, attractionId } = wannbeUpdate;
   const { handleSubmit, register } = useForm();
@@ -13,7 +13,7 @@ function UpdateReviewForm({ wannbeUpdate, setShowForm, setShowUpdateForm }) {
   );
   function onSumitUpdate(data) {
     const content = data.content;
-    console.log("ASDasda", content);
+    // console.log("ASDasda", content);
     mutate(
       { id, content },
       {

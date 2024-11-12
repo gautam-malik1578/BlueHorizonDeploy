@@ -11,7 +11,7 @@ export function useCreateReply(reviewId) {
     mutationFn: async (content) =>
       await createReplieOnReview(reviewId, content, token),
     onSuccess: () => {
-      console.log("boi we are in sucess of creating a reply :;)))");
+      // console.log("boi we are in sucess of creating a reply :;)))");
       queryClient.refetchQueries(["findReplies", reviewId]);
       toast.success("reply created sucessfully", {
         icon: "😁",

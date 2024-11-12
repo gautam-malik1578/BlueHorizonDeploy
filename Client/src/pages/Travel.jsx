@@ -17,18 +17,18 @@ function Travel() {
   const { searchViaMap, showMap } = useSelector((state) => state.setting);
   const searchType = useSelector((state) => state.search.searchType);
   const dispatch = useDispatch();
-  console.log(
-    "this is what we got from search via map  ,",
-    searchViaMap,
-    showMap
-  );
+  // console.log(
+  //   "this is what we got from search via map  ,",
+  //   searchViaMap,
+  //   showMap
+  // );
   // Get the current URL
   const navigator = useNavigate();
   const location = useLocation();
-  console.log(
-    "Current URL------------------------------------------:",
-    location.pathname
-  );
+  // console.log(
+  //   "Current URL------------------------------------------:",
+  //   location.pathname
+  // );
   return (
     <div className={styles.travelMain}>
       <Outlet className={styles.travelMainItem} />

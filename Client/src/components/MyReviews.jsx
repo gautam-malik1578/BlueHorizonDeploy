@@ -46,12 +46,12 @@ function MyReviews() {
   }
 
   function handleDeleteReview(id, attractionId) {
-    console.log("we are sending the delete mutate with ,", id);
+    // console.log("we are sending the delete mutate with ,", id);
     deleteReview(id, {
       onSuccess: () => {
-        console.log(
-          "we deleted the review successfully and here in delete handel fun"
-        );
+        // console.log(
+        //   "we deleted the review successfully and here in delete handel fun"
+        // );
         queryClient.refetchQueries(["findMyReviews"]);
         queryClient.invalidateQueries(["findAllReviews", attractionId]);
       },

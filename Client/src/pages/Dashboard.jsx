@@ -18,7 +18,7 @@ import Author from "../components/Author";
 import MyReviews from "../components/MyReviews";
 function Dashboard() {
   const { show } = useParams();
-  console.log(show);
+  // console.log(show);
   return (
     <div className={styles.dashboard}>
       <aside>

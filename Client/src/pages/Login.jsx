@@ -30,7 +30,7 @@ function Login() {
   } = useForm();
 
   function onHandleSubmit(data) {
-    console.log("the data we got in on handle submit is,", data);
+    // console.log("the data we got in on handle submit is,", data);
     mutate(data, {
       onSuccess: () => {
         reset();
@@ -40,7 +40,7 @@ function Login() {
   }
 
   function onSubmitError(err) {
-    console.log("this is onSubmit error we have,", err);
+    // console.log("this is onSubmit error we have,", err);
   }
 
   return (

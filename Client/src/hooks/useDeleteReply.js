@@ -11,7 +11,7 @@ export function useDeleteReply(reviewId) {
     mutationFn: async (replyId) =>
       await deleteRepliyOnReview(reviewId, replyId, token),
     onSuccess: () => {
-      console.log("boi we are in sucess of deleteing a review a reply :;)))");
+      // console.log("boi we are in sucess of deleteing a review a reply :;)))");
       queryClient.refetchQueries(["findReplies", reviewId]);
       toast.success("reply deleted sucessfully", {
         icon: "😎",
