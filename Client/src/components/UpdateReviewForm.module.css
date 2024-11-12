@@ -44,3 +44,14 @@
   justify-content: center;
   gap: 5%;
 }
+@media only screen and (max-width: 310px) {
+  .form label {
+    font-size: 10px;
+  }
+  .btns {
+    font-size: 8px;
+  }
+  .creatbtn {
+    font-size: 8px;
+  }
+}

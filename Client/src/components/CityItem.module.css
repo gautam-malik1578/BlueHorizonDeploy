@@ -128,6 +128,19 @@
 @media only screen and (max-width: 310px) {
   .CityItem {
     width: 290px;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .cityMeta {
+    /* width: 150px; */
+    /* background-color: red; */
+    flex: 0 0 60%;
+  }
+  .Imgslider {
+    width: 120px;
+    height: 90px;
+    flex: 0 0 40%;
+    /* background-color: yellow; */
   }
   .tagsList {
     font-size: 6px;

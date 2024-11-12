@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFindPopular } from "../hooks/useFindPopular";
+import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
 import styles from "./Popular.module.css";
 import Tags from "./Tags";
@@ -8,10 +9,14 @@ import { HiMiniHeart } from "react-icons/hi2";
 import { TbThumbUpFilled } from "react-icons/tb";
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
+import { useDispatch } from "react-redux";
+import { cityClicked } from "../slices/curCitySlice";
 
 function Popular() {
   const [selectedAttraction, setSelectedAttraction] = useState(null);
   const [showChart, setShowChart] = useState(false);
+  const dispatch = useDispatch();
+  const navigator = useNavigate();
   console.log("the selected attraction is =-", selectedAttraction);
   const { isLoading, data: popData, error } = useFindPopular();
   function handleClickButton(id) {
@@ -21,15 +26,22 @@ function Popular() {
     return <Loader />;
   }
   console.log(popData);
-  // const data = {
-  //   lables: ["a", "b", "c"],
-  //   datasets: [
-  //     {
-  //       label: "time",
-  //       data: [100, 50, 80],
-  //     },
-  //   ],
-  // };
+  function handleViewAttraction(cityId) {
+    // toast.success("working on feature", {
+    //   icon: "🔨",
+    //   style: { color: "var(--color-red)" },
+    // });
+    dispatch(
+      cityClicked({
+        cityId: cityId,
+        name: "",
+        lat: "",
+        lng: "",
+      })
+    );
+    navigator(`/travel/citydetail/${cityId}`);
+    // navigator(`/attraction/${name}/${attractionId}/reviews`);
+  }
   const labels = popData.map((item) => item.attractionName);
   const data = popData.map((item) => item.likes);
   // const Images = popData.map((item) => item?.imgs[0]);
@@ -100,17 +112,27 @@ function Popular() {
                 <h1>{attraction.attractionName}</h1>
                 <h3>{attraction.cityName}</h3>
                 <div>
-                  {attraction.isFav && <HiMiniHeart className={styles.icon} />}
-                  {attraction.isLiked && (
-                    <TbThumbUpFilled className={styles.icon} />
-                  )}
+                  {/* {attraction.isFav && <HiMiniHeart className={styles.icon} />} */}
+                  {/* {attraction.isLiked && ( */}
+                  <TbThumbUpFilled className={styles.icon} />
+                  {/* )} */}
                   <span>{attraction.likes}</span>
                 </div>
+                {/* <div className={styles.myTags}>
                 {attraction.tags.map((tag) => (
                   <Tags key={attraction._id}>{tag}</Tags>
                 ))}
+                </div> */}
               </div>
               <p className={styles.description}>{attraction.description}</p>
+              <button
+                className={styles.viewBtn}
+                onClick={() => {
+                  handleViewAttraction(attraction.cityId);
+                }}
+              >
+                view
+              </button>
             </div>
           </div>
         ))}

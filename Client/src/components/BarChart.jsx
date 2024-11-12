@@ -26,7 +26,12 @@ function BarChart({ data, chatToggle, images = [] }) {
         grid: {
           display: false,
         },
-        barThickness: 10, // Set a specific width for the bars (e.g., 10px)
+        barThickness: 10, // Width for the bars
+        ticks: {
+          font: {
+            size: window.innerWidth < 320 ? 8 : 12, // Smaller font size if screen width < 320px
+          },
+        },
       },
       y: {
         beginAtZero: true,
@@ -36,6 +41,9 @@ function BarChart({ data, chatToggle, images = [] }) {
         ticks: {
           stepSize: 1,
           callback: (value) => value,
+          font: {
+            size: window.innerWidth < 320 ? 8 : 12, // Smaller font size if screen width < 320px
+          },
         },
       },
     },
@@ -44,12 +52,10 @@ function BarChart({ data, chatToggle, images = [] }) {
         const ctx = chart.ctx;
         const dataset = chart.getDatasetMeta(0).data;
 
-        // Ensure images are drawn after preloading
         ctx.save();
         preloadedImages.forEach((img, index) => {
           const bar = dataset[index];
           if (bar && img.complete) {
-            // Check if image is loaded
             const barX = bar.x;
             const barY = bar.y;
             const imgWidth = 30;
@@ -58,7 +64,7 @@ function BarChart({ data, chatToggle, images = [] }) {
             ctx.drawImage(
               img,
               barX - imgWidth / 2,
-              barY - imgHeight - 10, // Position image above the bar
+              barY - imgHeight - 10,
               imgWidth,
               imgHeight
             );
@@ -72,7 +78,7 @@ function BarChart({ data, chatToggle, images = [] }) {
   return (
     // <div className={styles.chartPage}>
     <div className={styles.bar}>
-      <Bar options={options} data={data} />
+      <Bar options={options} data={data} className={styles.chart} />
       <button
         className={styles.chartBtn}
         onClick={() => {

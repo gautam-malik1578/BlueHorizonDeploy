@@ -1,7 +1,7 @@
-/* .chartPage {
+.chartPage {
   height: 100%;
   width: 100%;
-} */
+}
 .bar {
   height: 500px;
   width: 100%;
@@ -20,4 +20,25 @@
   border-radius: 7px;
   cursor: pointer;
   border: none;
+}
+@media (max-width: 320px) {
+  .bar {
+    height: 900px; /* Adjust height for smaller screens */
+    /* width: 90%; Adjust width for smaller screens */
+    transform: translateY(50px);
+  }
+  .chart {
+    height: 400px;
+    transform: translateY(50px);
+  }
+
+  /* Adjust chart elements, like bar thickness */
+  .chartPage canvas {
+    /* This reduces the overall chart canvas size */
+    transform: scale(1.5);
+    /* Scale down the chart to fit smaller screens */
+  }
+  .chartBtn {
+    transform: translateY(50px);
+  }
 }

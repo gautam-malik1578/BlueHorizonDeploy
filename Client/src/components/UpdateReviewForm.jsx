@@ -36,7 +36,7 @@ function UpdateReviewForm({ wannbeUpdate, setShowForm, setShowUpdateForm }) {
         />
       </div>
       <div>
-        <label htmlFor="content">make ammendmends in your comment</label>
+        <label htmlFor="content">make ammendmends in post</label>
         <textarea
           className={styles.content}
           defaultValue={wannbeUpdate.content}
@@ -46,17 +46,17 @@ function UpdateReviewForm({ wannbeUpdate, setShowForm, setShowUpdateForm }) {
         />
       </div>
       <div className={styles.btns}>
-        <button className={styles.creatbtn}>update Review</button>
-        <button disabled className={styles.creatbtn}>
+        <button className={styles.creatbtn}>update</button>
+        {/* <button disabled className={styles.creatbtn}>
           Draft Review
-        </button>
+        </button> */}
         <button
           className={styles.creatbtn}
           onClick={() => {
             setShowForm(false);
           }}
         >
-          All Reviews &rarr;
+          Back&rarr;
         </button>
       </div>
     </form>

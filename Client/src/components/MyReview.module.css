@@ -24,6 +24,7 @@
 .btns button {
   padding: 10px 10px;
   width: 7rem;
+  border: none;
   background-color: var(--color-blue);
   color: white;
   border: 1px solid white;

@@ -3,6 +3,7 @@
   transition: all 0.3s;
   padding: 0 5px;
   color: white;
+  font-weight: 700;
   border-radius: var(--border-radius-sm);
   opacity: 0.3;
 }

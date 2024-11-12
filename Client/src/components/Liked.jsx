@@ -9,9 +9,9 @@ function Liked() {
   if (isLoading) {
     return <Loader />;
   }
-  if (len === 0) {
-    return <NotFound text="No liked Attraction Yet :(" />; //rendering not found component
-  }
+  // if (len === 0) {
+  //   return <NotFound text="No liked Attraction Yet :(" />; //rendering not found component
+  // }
   return (
     <div style={{ backgroundColor: "white" }} className={styles.liked}>
       {len && (
@@ -26,6 +26,7 @@ function Liked() {
           attraction={attraction}
         />
       ))}
+      {len == 0 && <NotFound text="No liked Attraction Yet :(" />}
       {"liked"}
     </div>
   );

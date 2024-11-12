@@ -128,12 +128,28 @@
   .myDetails {
     flex-direction: column;
     background-color: #fff;
+    height: auto;
+    min-height: 660px;
   }
   .avtar {
     width: 100vw;
     /* width: 290px; */
   }
-  .myInfo {
-    width: 100vw;
+  .info {
+    width: 290px;
+  }
+  .myInfo div span:last-child {
+    font-size: 12px;
+  }
+  .myInfo div span:first-child {
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .btns button {
+    font-size: 10px;
+  }
+  .avtar figure {
+    height: 90px;
+    width: 90px;
   }
 }

@@ -79,3 +79,26 @@
   background-color: whitesmoke;
   color: var(--color-red);
 }
+@media only screen and (max-width: 320px) {
+  .avatarBox {
+    /* height: 400px; */
+    /* background-color: yellow; */
+  }
+  .avatars {
+    /* background-color: pink; */
+    /* width: ; */
+    align-items: center;
+    gap: 12px;
+  }
+  .avatar {
+    width: 120px;
+  }
+  .avatar figure {
+    height: 40px;
+    width: 40px;
+  }
+  .avatarBox button {
+    top: 7%;
+    left: 20%;
+  }
+}

@@ -58,20 +58,20 @@ function Me() {
           <p>my details</p>
           <div className={styles.myInfo}>
             <div>
-              <span>username</span>
-              <span>{data.data?.user.username}</span>
+              <span className={styles.span1}>username</span>
+              <span className={styles.span2}>{data.data?.user.username}</span>
             </div>
             <div>
-              <span>email</span>
-              <span>{data.data?.user.email}</span>
+              <span className={styles.span1}>email</span>
+              <span className={styles.span2}>{data.data?.user.email}</span>
             </div>
             <div>
-              <span>role</span>
-              <span>{data.data?.user.role}</span>
+              <span className={styles.span1}>role</span>
+              <span className={styles.span2}>{data.data?.user.role}</span>
             </div>
             <div>
-              <span>gender</span>
-              <span>{data.data?.user.sex}</span>
+              <span className={styles.span1}>gender</span>
+              <span className={styles.span2}>{data.data?.user.sex}</span>
             </div>
           </div>
           <div className={styles.btns}>

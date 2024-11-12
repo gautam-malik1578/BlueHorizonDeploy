@@ -43,9 +43,9 @@ function CityItem({ city }) {
         <div className={styles.intro}>
           <span className={styles.cityname}>{city.cityName}</span>
           <div className={styles.tagsList}>
-            <Tags type={"blue"}>Reviewd</Tags>
+            {/* <Tags type={"red"}>Reviewd</Tags> */}
             {/* <Tags type="red">Drafted</Tags> */}
-            <Tags type="green">Noted</Tags>
+            {/* <Tags type="green">Noted</Tags> */}
           </div>
         </div>
         {/*  sub intro */}

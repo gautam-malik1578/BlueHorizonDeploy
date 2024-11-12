@@ -49,3 +49,20 @@ ol {
   border-radius: 50%;
   overflow: hidden;
 }
+@media only screen and (max-width: 360px) {
+  .author {
+    height: 500px;
+  }
+  .about {
+    font-size: 12px;
+  }
+  .fig1 {
+    width: 80px;
+    height: 80px;
+  }
+  .fig2 {
+    /* transform: translateX(-50px); */
+    width: 40px;
+    height: 40px;
+  }
+}

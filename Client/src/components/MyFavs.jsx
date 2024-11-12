@@ -11,9 +11,9 @@ function MyFavs() {
   console.log(data?.data?.favAttractions[0]?.attractionIds);
   const len = data?.data?.favAttractions[0]?.attractionIds.length;
   console.log(len);
-  if (len === 0) {
-    return <NotFound text="No Favs Yet :(" />;
-  }
+  // if (len === 0) {
+  //   return <NotFound text="No Favs Yet :(" />;
+  // }
   return (
     <div style={{ backgroundColor: "white" }} className={styles.fav}>
       {len && (
@@ -28,6 +28,7 @@ function MyFavs() {
           attraction={attraction}
         />
       ))}
+      {len == 0 && <NotFound text="No Favs Yet :(" />}
     </div>
   );
 }

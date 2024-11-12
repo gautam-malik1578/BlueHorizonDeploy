@@ -12,4 +12,10 @@
 .admin p {
   margin-top: 40px;
   text-transform: capitalize;
+  text-align: center;
+}
+@media only screen and (max-width: 320px) {
+  .admin {
+    height: 650px;
+  }
 }
