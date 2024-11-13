@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { setToken, setUserData, toggleLogIn } from "../slices/userSlice";
 import toast from "react-hot-toast";
 import styles from "./Verify.module.css";
-
+const BASE_URL = "https://bluehorizondeploy.onrender.com/";
 function Verify() {
   const [isRequestingOtp, setIsRequestingOtp] = useState(true);
   const [email, setEmail] = useState("");
@@ -25,8 +25,8 @@ function Verify() {
     setLoading(true); // Start loading
 
     const url = isRequestingOtp
-      ? "http://127.0.0.1:8000/user/getotp"
-      : "http://127.0.0.1:8000/user/verify";
+      ? `${BASE_URL}/user/getotp`
+      : `${BASE_URL}/user/verify`;
 
     const payload = isRequestingOtp ? { email } : { email, otp };
 

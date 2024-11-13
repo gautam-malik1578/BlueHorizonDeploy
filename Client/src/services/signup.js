@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:8000/";
+// const BASE_URL = "http://127.0.0.1:8000/";
+const BASE_URL = "https://bluehorizondeploy.onrender.com/";
 export async function signup(dataObj) {
   // console.log("we are in the sign up services with data as === ", dataObj);
   if (dataObj.length === 0) {

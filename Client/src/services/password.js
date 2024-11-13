@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:8000/";
+// const BASE_URL = "http://127.0.0.1:8000/";
+const BASE_URL = "https://bluehorizondeploy.onrender.com/";
 export async function resetPassword(content, token) {
   console.log("we are in services of resetting the password");
   const req = await fetch(`${BASE_URL}user/resetpassword?token=${token}`, {
