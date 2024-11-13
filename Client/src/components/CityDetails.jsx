@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import Attraction from "./Attraction";
-import styles from "./cityDetails.module.css";
+import styles from "./CityDetails.module.css";
 import { useQuery } from "@tanstack/react-query";
 import { getAllatractionsOnACity } from "../services/getCities";
 import { useNavigate } from "react-router-dom";
