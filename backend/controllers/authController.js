@@ -44,14 +44,10 @@ export const Verify = catchAsync(async (req, res, next) => {
   }
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
-    return next(
-      new AppError("the email does not exist to be verifed with ", 400)
-    );
+    return next(new AppError("the email does not exist  ", 400));
   }
   if (user.isVerified) {
-    return next(
-      new AppError("the user is already verified no need to verfiry with", 400)
-    );
+    return next(new AppError("the user is already verified ", 400));
   }
   // now we need to check if the otp sent is matches to what we gave and is within the time limit and respond accordingly
   if (user.Otp != Number(req.body.otp)) {
@@ -88,21 +84,15 @@ export const Verify = catchAsync(async (req, res, next) => {
 export const sendOtp = catchAsync(async (req, res, next) => {
   // now this guy need to be here mate it should have the email to whic we need to send otp and to that email we set the
   if (!req.body.email) {
-    return next(
-      new AppError("plz provide the eamil to which desired to be verified")
-    );
+    return next(new AppError("plz provide the eamil which is to be verified"));
   }
   // now what we can  find the user wiht the desired email
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
-    return next(
-      new AppError("the email does not exist to be verifed with ", 400)
-    );
+    return next(new AppError("the email does not exist ", 400));
   }
   if (user.isVerified) {
-    return next(
-      new AppError("the user is already verified no need to verfiry with", 400)
-    );
+    return next(new AppError("the user is already verified ", 400));
   }
   // now if we have reached  here we need to genrate the otp save it to db and the expired time and the send it over via email
   const otp = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000; // we have genrate the otp

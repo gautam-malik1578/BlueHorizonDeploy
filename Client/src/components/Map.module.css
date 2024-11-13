@@ -73,6 +73,7 @@
   font-size: 1rem;
   height: 200px;
   width: 200px;
+  /* color: red; */
   /* not working for some reason */
 }
 :global(.leaflet-marker-icon) {
@@ -96,7 +97,17 @@
 .tolink:link,
 .tolink:visited {
   text-decoration: none;
+  /* background-color: red; */
 }
 .tolink:hover,
 .tolink:active {
 }
+/* .attractionCountDiv {
+  width: 120px;
+  height: 50px;
+}
+.checkbtn {
+  width: 50px;
+  height: 20px;
+  background-color: yellow;
+} */

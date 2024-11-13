@@ -108,6 +108,7 @@
 }
 
 :global(.leaflet-popup-content div) {
+  /* background-color: red; */
   /* font-size: 0.6rem; */
 }
 :global(.leaflet-popup-tip) {

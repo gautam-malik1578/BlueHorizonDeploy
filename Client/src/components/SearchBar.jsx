@@ -11,16 +11,19 @@ import { setMapFalse } from "../slices/settingSlice";
 function SearchBar({ setCityData }) {
   const mapRadius = useSelector((store) => store.search.mapCenterRadius);
   const { searchType, searchValue } = useSelector((state) => state.search);
+  const { searchViaMap, showMap } = useSelector((state) => state.setting);
   const [value, setValue] = useState(searchValue);
   const [type, setType] = useState(searchType);
   const dispatch = useDispatch();
-  // console.log(
-  //   "the value of searchTYpe and search value is ++++++++++,",
-  //   searchType,
-  //   searchValue
-  // );
+  console.log(
+    "the value of searchTYpe and search value is ++++++++++,",
+    searchType,
+    searchValue,
+    searchViaMap,
+    showMap
+  );
   useEffect(() => {
-    dispatch(search({ searchType: "country", searchValue: "" }));
+    // dispatch(search({ searchType: "country", searchValue: "" }));
     dispatch(setMapFalse());
   }, []);
   return (

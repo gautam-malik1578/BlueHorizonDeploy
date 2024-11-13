@@ -28,7 +28,7 @@ function CityList() {
         {!searchValue && searchType !== "map" && <SearchSuggetion />}
         {searchValue || searchType === "map" ? (
           isLoading ? (
-            <Loader text="searching..." height={300} width={300} />
+            <Loader text="searching..." height={200} width={200} />
           ) : cityData.length === 0 ? (
             <NotFound />
           ) : (

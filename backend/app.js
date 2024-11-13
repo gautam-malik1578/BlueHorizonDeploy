@@ -49,7 +49,7 @@ const App = express();
 // App.use(cookieParser());
 App.use(
   cors({
-    // origin: "http://127.0.0.1:5173/",
+    // origin: "http://127.0.0.1:4173/",
     credentials: true,
     // allowedHeaders: ["Content-Type", "Authorization"],
   })

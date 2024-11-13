@@ -59,7 +59,7 @@ function Notes({ attractionId }) {
             action = "update";
           }}
         >
-          {data.length === 0 ? "create note" : "update note"}
+          {data.length === 0 ? "create" : "update"}
         </button>
         {data.length !== 0 && (
           <button
@@ -67,7 +67,7 @@ function Notes({ attractionId }) {
               action = "delete";
             }}
           >
-            delete note
+            delete
           </button>
         )}
       </div>

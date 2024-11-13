@@ -112,9 +112,12 @@ a:active {
     gap: 10px;
   }
 }
-@media only screen and (max-width: 310px) {
+@media only screen and (max-width: 370px) {
   .signup {
     width: 280px;
+    height: 500px;
+    /* background-color: yellow; */
+    transform: translateY(-1px);
   }
   .signup form button {
     transform: translateY(20px);

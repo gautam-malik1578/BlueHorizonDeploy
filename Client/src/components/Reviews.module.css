@@ -107,3 +107,12 @@
     transform: translateX(-20px);
   }
 }
+@media only screen and (max-width: 360px) {
+  .reviewsIntro p {
+    transform: translateY(2px);
+    /* background-color: pink; */
+  }
+  .reviews {
+    /* gap: 15px; */
+  }
+}

@@ -29,7 +29,7 @@ function Reviews({ attractionId, attractionName }) {
             <IoArrowBackOutline className={styles.icon} />
           </button>
           {/* <p>{`we found ${data?.length} Posts on ${attractionName}`}</p> */}
-          <p>{`we found ${data?.length} Posts`}</p>
+          <p className={styles.noOfPost}>{`we found ${data?.length} Posts`}</p>
           <button
             className={styles.addReview}
             onClick={() => {

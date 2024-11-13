@@ -17,13 +17,22 @@ const settingSlice = createSlice({
       state.StopshowAnnimation = !state.StopshowAnnimation;
     },
     searchViaMapToogle(state, action) {
-      if (state.searchViaMap == false) {
+      // if (state.searchViaMap == false) {
+      //   state.showMap = true;
+      //   state.searchViaMap = true;
+      //   //when we start search via map we also want the map to appear
+      // } else {
+      //   state.showMap = false;
+      //   state.searchViaMap = false;
+      // }
+      if (!state.searchViaMap) {
         state.showMap = true;
         state.searchViaMap = true;
-        //when we start search via map we also want the map to appear
+        state.searchType = "map"; // Only set to "map" when actively toggling to the map search
       } else {
         state.showMap = false;
         state.searchViaMap = false;
+        state.searchType = "country"; // Reset to "country" when toggling off
       }
     },
     setMapFalse(state, action) {

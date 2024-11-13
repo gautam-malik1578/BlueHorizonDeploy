@@ -102,9 +102,23 @@ function Login() {
               <button>login</button>
             </form>
             <h3>{"don't have an account ? sign up now"}</h3>
-            <Link to="/signup">sign up</Link>
+            <button
+              className={styles.mybtns}
+              onClick={() => {
+                navigate("/signup");
+              }}
+            >
+              sign up
+            </button>
             <h3>{"Not verified yet? verify Now!!"}</h3>
-            <Link to="/verify">verify</Link>
+            <button
+              className={styles.mybtns}
+              onClick={() => {
+                navigate("/verify");
+              }}
+            >
+              verify
+            </button>
           </div>
         </div>
       )}

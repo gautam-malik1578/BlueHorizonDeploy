@@ -99,6 +99,7 @@ function ShowOnMap({ city }) {
         lng: city.lng,
       })
     );
+    navigator(`/travel/citydetail/${city._id}`);
   };
 
   const eggMarkerIcon = new L.Icon({
@@ -121,9 +122,24 @@ function ShowOnMap({ city }) {
       <Popup closeOnClick={true}>
         {city.cityName && <span>{city.cityName}</span>}
         {city.todos.length && (
-          <div>{city.todos.length} attractions found !!</div>
+          <div
+            className={styles.attractionCountDiv}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              console.log("we hade a clikc the pop up ");
+              navigator(`/travel/citydetail/${city._id}`);
+            }}
+          >
+            {city.todos.length} attractions found !!
+          </div>
         )}
-        <Link to={`/travel/citydetail/${city._id}`}>check</Link>
+        <Link
+          to={`/travel/citydetail/${city._id}`}
+          className={styles.cheackbtn}
+        >
+          check
+        </Link>
       </Popup>
     </Marker>
   );

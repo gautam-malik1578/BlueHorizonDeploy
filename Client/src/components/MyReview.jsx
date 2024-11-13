@@ -10,7 +10,14 @@ function MyReview({ review, handleDeleteReview, handleViewAttraction }) {
     <div className={styles.review} key={review._id}>
       <figure>
         {/* <img src={review.authorAvatarUrl} alt="userpic" /> */}
-        <img src={ImgUrl} alt="userpic" />
+        <img
+          src={ImgUrl}
+          alt="Img Not Found"
+          onError={(e) => {
+            e.target.src =
+              "https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=";
+          }}
+        />
       </figure>
       <div className={styles.info}>
         <div className={styles.meta}>
