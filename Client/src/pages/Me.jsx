@@ -184,10 +184,10 @@ function Me() {
       <div
         className={styles.myDetails}
         style={{
-          flexDirection: isMobile ? "column" : "row", // Apply different flex direction based on screen size
+          flexDirection: isMobile ? "column" : "row", // Apply flex-direction for smaller screen sizes
           backgroundColor: "#fff",
-          height: isMobile ? "auto" : "100%", // Adjust height based on screen size
-          minHeight: isMobile ? "660px" : "auto", // Adjust minHeight
+          height: isMobile ? "auto" : "100%", // Apply height adjustment for mobile
+          minHeight: isMobile ? "660px" : "auto", // Adjust minHeight for mobile
         }}
       >
         {showAvatarOptions ? (
@@ -220,7 +220,7 @@ function Me() {
         <div
           className={styles.info}
           style={{
-            width: isMobile ? "100vw" : "290px", // Apply width change based on screen size
+            width: isMobile ? "100vw" : "290px", // Adjust width for mobile view
           }}
         >
           <p>my details</p>
