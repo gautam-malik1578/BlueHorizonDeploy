@@ -24,7 +24,7 @@ import { GlobalErrorHandler } from "./utils/GlobalErrorHandler.js";
 //////////connecting to the db//////////////////////////////////////
 mongoose
   .connect(
-    `mongodb+srv://gamapy87:${process.env.DBPassword}@bluehorizon1.jhwa4.mongodb.net/?retryWrites=true&w=majority&appName=BlueHorizon1`,
+    `mongodb+srv://gamapy87:${process.env.DBPassword}@bluehorizon1.jhwa4.mongodb.net/?retryWrites=true&w=majority&appName=BlueHorizon1/test`,
     // "mongodb://127.0.0.1:27017/blueHorizon",
     {
       useNewUrlParser: true,
