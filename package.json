@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "description": "the backed end api for blue horizon project",
   "main": "app.js",
-  "scripts": {
-    "start": "nodemon backend/app.js",
-    "build": "npm install && npm install --prefix Client && npx vite build --prefix Client"
-  },
+"scripts": {
+  "start": "nodemon backend/app.js",
+  "build": "npm install && cd Client && npm install && npx vite build && cd .."
+}
+,
   "author": "Gautam malik",
   "license": "ISC",
   "dependencies": {
