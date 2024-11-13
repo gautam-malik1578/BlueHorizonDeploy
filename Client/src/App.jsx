@@ -115,7 +115,7 @@ const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Travel = React.lazy(() => import("./pages/Travel"));
 const PageNotFound = React.lazy(() => import("./pages/PageNotFound"));
 const ReviewsPage = React.lazy(() => import("./pages/ReviewsPage"));
-const CityDetails = React.lazy(() => import("./components/cityDetails"));
+const CityDetails = React.lazy(() => import("./components/CityDetails"));
 const Map = React.lazy(() => import("./components/Map"));
 const Verify = React.lazy(() => import("./pages/Verify"));
 const CityList = React.lazy(() => import("./components/CityList"));
