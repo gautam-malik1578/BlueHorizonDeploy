@@ -1,8 +1,8 @@
 import styles from "./Travel.module.css";
-import Map from "../components/Map";
+// import Map from "../components/Map";
 import { useDispatch, useSelector } from "react-redux";
-import CityList from "../components/CityList";
-import CityDetails from "../components/cityDetails";
+// import CityList from "../components/CityList";
+// import CityDetails from "../components/cityDetails";
 import { searchViaMapToogle, showMapToggle } from "../slices/settingSlice";
 import { search } from "../slices/searchSlice";
 import { Outlet, useLocation } from "react-router-dom";
