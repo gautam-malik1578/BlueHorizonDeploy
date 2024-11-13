@@ -5,7 +5,8 @@
   "description": "the backed end api for blue horizon project",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon backend/app.js",
+    "build": "npm install && npm install --prefix Client && npx vite build --prefix Client"
   },
   "author": "Gautam malik",
   "license": "ISC",

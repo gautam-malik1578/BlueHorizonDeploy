@@ -6,6 +6,10 @@ function Author() {
         <img
           src="https://media.licdn.com/dms/image/v2/D4E03AQELS8mKQCsHUg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714967077359?e=1736380800&v=beta&t=IIY429gIhc25Yg2V4VAGT8IB97zRtgDSahXagJnV0A4"
           alt="author pic"
+          onError={(e) => {
+            e.target.src =
+              "https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=";
+          }}
         />
       </figure>
       <p className={styles.about}>

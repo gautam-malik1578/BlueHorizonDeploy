@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.2.0",
     "@tanstack/react-query": "^4.36.1",
     "@tanstack/react-query-devtools": "^4.36.1",
+    "backend": "file:..",
     "chart.js": "^4.4.2",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",

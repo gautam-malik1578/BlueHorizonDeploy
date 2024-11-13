@@ -1,3 +1,4 @@
+import path from "path";
 //////////////////////////// 3rd part lib///////////////////////////////////
 import express from "express";
 import compression from "compression";
@@ -41,6 +42,7 @@ mongoose
   });
 
 ////////////////////middlerwares//////////////////////////////
+const _dirname = path.resolve();
 // const corsOptions = {
 //   origin: "http://localhost:5173/travel",
 //   Credential: true,
@@ -59,12 +61,12 @@ App.use(express.json()); ///adding the middleware to the stack to read the body
 // fs.writeFileSync("./test.txt", myfile);
 App.use(cookieParser());
 App.use(morgan("dev"));
-App.get("/", (req, res) => {
-  res.status(400).json({
-    status: "success",
-    data: "hello from the server",
-  });
-});
+// App.get("/", (req, res) => {
+//   res.status(400).json({
+//     status: "success",
+//     data: "hello from the server",
+//   });
+// });
 App.use(compression());
 App.use("/user", userRouter);
 App.use("/cities", cityRouter);
@@ -74,11 +76,13 @@ App.use("/attractions", attractionRouter);
 App.use("/favorites", favoriteRouter);
 App.use("/likes", likeRouter);
 App.use("/replies", replyRouter);
+App.use(express.static(path.join(_dirname, "/Client/dist")));
 App.use("*", (req, res) => {
-  res.status(404).json({
-    status: "fail",
-    message: "we could not find the route",
-  });
+  res.sendFile(path.resolve(_dirname, "Client", "dist", "index.html"));
+  // res.status(404).json({
+  //   status: "fail",
+  //   message: "we could not find the route",
+  // });
 });
 
 App.use(GlobalErrorHandler);
