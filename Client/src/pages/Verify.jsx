@@ -25,8 +25,8 @@ function Verify() {
     setLoading(true); // Start loading
 
     const url = isRequestingOtp
-      ? `${BASE_URL}/user/getotp`
-      : `${BASE_URL}/user/verify`;
+      ? `${BASE_URL}user/getotp`
+      : `${BASE_URL}user/verify`;
 
     const payload = isRequestingOtp ? { email } : { email, otp };
 
