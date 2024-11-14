@@ -76,6 +76,9 @@ App.use("/attractions", attractionRouter);
 App.use("/favorites", favoriteRouter);
 App.use("/likes", likeRouter);
 App.use("/replies", replyRouter);
+App.use("/test", (req, res) => {
+  res.status(200).json({ message: "this is a test message" });
+});
 App.use(express.static(path.join(_dirname, "/Client/dist")));
 App.use("*", (req, res) => {
   res.sendFile(path.resolve(_dirname, "Client", "dist", "index.html"));
